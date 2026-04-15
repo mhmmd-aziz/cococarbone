@@ -1,0 +1,152 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang Kami",
+    "products": "Produk",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "title": "Ekspor Kelapa Premium",
+    "subtitle": "Meningkatkan operasi pertanian ke tingkat yang lebih tinggi dengan produk kelapa dan arang berkualitas tinggi kami.",
+    "cta": "Hubungi via WhatsApp"
+  },
+  "about_preview": {
+    "badge": "Tentang Cococarbone",
+    "title": "Mitra Terpercaya Anda untuk Pasokan Kelapa & Arang Global",
+    "desc": "Berbasis di Indonesia, kami berspesialisasi dalam mengekspor produk kelapa dan arang premium ke pasar global. Kami menjaga kontrol kualitas yang ketat dari perkebunan kami langsung ke pelabuhan Anda, memastikan Anda mendapatkan yang terbaik dari alam.",
+    "btn": "Pelajari Lebih Lanjut",
+    "stats": {
+      "cap": "Kapasitas Volume",
+      "exp": "Siap Ekspor",
+      "qual": "Kualitas Premium"
+    }
+  },
+  "why_us": {
+    "badge": "Kenapa Kami",
+    "title": "Mengapa Memilih Cococarbone?",
+    "subtitle": "Kami memastikan keandalan, kualitas, dan logistik yang lancar untuk setiap mitra B2B di seluruh dunia.",
+    "cards": {
+      "c1_title": "Kualitas Premium",
+      "c1_desc": "Disortir dan diproses secara ketat untuk memenuhi standar B2B internasional.",
+      "c2_title": "Pasokan Andal",
+      "c2_desc": "Kapasitas volume yang konsisten untuk mendukung operasi bisnis Anda secara berkelanjutan.",
+      "c3_title": "Logistik Global",
+      "c3_desc": "Berpengalaman dalam menangani dokumen ekspor dan pengiriman global (FOB/CIF).",
+      "c4_title": "Ramah Lingkungan",
+      "c4_desc": "Sumber bahan baku berkelanjutan dan pemrosesan yang bertanggung jawab terhadap lingkungan."
+    }
+  },
+
+  "products_preview": {
+    "badge": "Produk Kami",
+    "title": "Jelajahi Komoditas Premium Kami",
+    "subtitle": "Sumber daya alam berkualitas tinggi yang diproses untuk memenuhi standar global.",
+    "items": {
+      "charcoal": {
+        "title": "Arang Batok Kelapa",
+        "desc": "Briket premium dan arang natural untuk shisha dan BBQ, menawarkan panas tinggi dan abu rendah."
+      },
+      "coconut": {
+        "title": "Kelapa Segar & Semi-Husked",
+        "desc": "Kelapa tua pilihan, kaya akan daging dan air, sangat cocok untuk pemrosesan industri."
+      },
+      "candlenut": {
+        "title": "Kemiri Premium",
+        "desc": "Kemiri utuh berkualitas tinggi, penting untuk keperluan kuliner dan ekstraksi minyak."
+      }
+    },
+    "btn": "Lihat Detail"
+  },
+  "footer": {
+    "company_desc": "Mengekspor produk pertanian terbaik Indonesia ke seluruh dunia.",
+    "quick_links": "Tautan Cepat",
+    "contact": "Hubungi Kami",
+    "address": "Indonesia",
+    "rights": "Hak cipta dilindungi undang-undang."
+  }, 
+
+  "charcoal_page": {
+    "title": "Briket Arang Batok Kelapa",
+    "desc": "Briket kelas premium yang dirancang khusus untuk Shisha/Hookah dan BBQ. Diproduksi menggunakan 100% batok kelapa alami dari Indonesia, memastikan waktu bakar yang lama, panas tinggi, tanpa bahan kimia, dan abu yang sangat rendah.",
+    "specs_title": "Spesifikasi Teknis",
+    "pack_title": "Pengemasan & Kapasitas Pemuatan",
+    "specs": {
+      "ash": "Maks 2.5%",
+      "carbon": "Min 75% - 80%",
+      "moisture": "Maks 5%",
+      "volatile": "Maks 15%",
+      "calorie": "Min 7200 Kcal/kg",
+      "burning": "2 - 2.5 Jam",
+      "shape": "Kubus (22mm, 25mm, 26mm), Heksagonal"
+    },
+    "packaging": {
+      "inner": "Kotak Dalam dengan Plastik (1kg / 2kg)",
+      "master": "Karton Master (10kg / 20kg)",
+      "custom": "Tersedia Merek OEM / Kustom",
+      "load_20ft": "Sekitar 18 Metrik Ton",
+      "load_40ft": "Sekitar 25-26 Metrik Ton"
+    }
+  },
+  "coconut_page": {
+    "title": "Kelapa Segar Semi-Husked",
+    "desc": "Kelapa tua pilihan yang berasal dari perkebunan terbaik di Indonesia. Ideal untuk keperluan industri, ekstraksi santan, kelapa parut kering, dan konsumsi harian.",
+    "specs_title": "Spesifikasi Produk",
+    "pack_title": "Pengemasan & Pengiriman",
+    "specs": {
+      "type": "Kelapa Tua Semi-Husked",
+      "weight": "800g - 1200g+ per butir",
+      "color": "Coklat Muda / Coklat",
+      "grade": "Tersedia Grade A / B / C",
+      "shelf_life": "60 Hari (penyimpanan yang tepat)"
+    },
+    "packaging": {
+      "bag": "Karung Jaring (Mesh Bag)",
+      "qty": "25 - 30 butir per karung",
+      "weight_bag": "Sekitar 25kg - 30kg per karung",
+      "load_40ft": "Sekitar 25 Metrik Ton (900 - 1000 karung)"
+    }
+  },
+
+  "about_page": {
+    "title": "Tentang CV. Indo Nusantara",
+    "subtitle": "Menghubungkan kekayaan sumber daya alam Indonesia dengan pasar global.",
+    "story_title": "Cerita Kami",
+    "story_desc": "Cococarbone beroperasi di bawah CV. Indo Nusantara, perusahaan ekspor yang terdaftar resmi di Indonesia. Kami memulai dengan visi untuk memberdayakan petani lokal dan memberikan komoditas pertanian kualitas tertinggi kepada pembeli internasional. Dengan kontrol kualitas yang ketat dan pemahaman mendalam tentang logistik global, kami memastikan setiap pengiriman memenuhi harapan Anda.",
+    "vision_title": "Visi Kami",
+    "vision_desc": "Menjadi pemasok produk pertanian Indonesia yang paling tepercaya dan andal di seluruh dunia, mempromosikan perdagangan yang berkelanjutan dan adil.",
+    "mission_title": "Misi Kami",
+    "mission_desc": "Memberikan kualitas premium secara berkelanjutan, menjaga hubungan B2B yang transparan, dan memastikan pengiriman global tepat waktu."
+  },
+  "products_page": {
+    "title": "Katalog Kami",
+    "subtitle": "Jelajahi pilihan komoditas premium kami yang siap ekspor."
+  },
+  "contact_page": {
+    "title": "Hubungi Kami",
+    "subtitle": "Siap untuk memesan atau butuh penawaran khusus? Kami siap membantu.",
+    "office": "Kantor Pusat",
+    "whatsapp": "Chat di WhatsApp",
+    "email": "Kirim Email"
+  }, 
+
+  "candlenut_page": {
+    "title": "Kemiri Utuh Premium",
+    "desc": "Kemiri berkualitas tinggi yang berasal dari perkebunan terbaik di Indonesia Timur. Kemiri kami diproses dengan hati-hati untuk menjaga kandungan minyak alami dan warna putih kremnya, sangat cocok untuk ekstraksi minyak industri dan keperluan kuliner.",
+    "specs_title": "Spesifikasi Produk",
+    "pack_title": "Pengemasan & Pengiriman",
+    "specs": {
+      "type": "Kemiri Kupas Utuh",
+      "color": "Putih Krem",
+      "moisture": "Maks 5%",
+      "quality": "Grade A / Premium",
+      "foreign": "Hampir Nol (Bersih)"
+    },
+    "packaging": {
+      "bag": "Plastik Lapis Ganda atau Karung Goni",
+      "weight": "25kg - 50kg per karung",
+      "custom": "Tersedia kemasan curah sesuai permintaan",
+      "load_20ft": "Sekitar 15-17 Metrik Ton"
+    }
+  }
+
+}

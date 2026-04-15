@@ -1,0 +1,151 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Premium Coconut Export",
+    "subtitle": "Elevates agricultural operations to new heights with our high-quality coconut and charcoal products.",
+    "cta": "Contact via WhatsApp"
+  },
+  "about_preview": {
+    "badge": "About Cococarbone",
+    "title": "Your Trusted Partner in Global Coconut & Charcoal Supply",
+    "desc": "Based in Indonesia, we specialize in exporting premium coconut and charcoal products to the global market. We maintain strict quality control from our plantations directly to your port, ensuring you get the best nature has to offer.",
+    "btn": "Learn More About Us",
+    "stats": {
+      "cap": "Volume Capacity",
+      "exp": "Export Ready",
+      "qual": "Premium Grade"
+    }
+  },
+  "why_us": {
+    "badge": "Why Us",
+    "title": "Why Choose Cococarbone?",
+    "subtitle": "We ensure reliability, quality, and seamless logistics for every B2B partner worldwide.",
+    "cards": {
+      "c1_title": "Premium Quality",
+      "c1_desc": "Strictly sorted and processed to meet international B2B standards.",
+      "c2_title": "Reliable Supply",
+      "c2_desc": "Consistent volume capacity to support your continuous business operations.",
+      "c3_title": "Global Logistics",
+      "c3_desc": "Experienced in handling export documentation and global shipping (FOB/CIF).",
+      "c4_title": "Eco-Friendly",
+      "c4_desc": "Sustainable sourcing and environmentally responsible processing."
+    }
+  },
+
+  "products_preview": {
+    "badge": "Our Products",
+    "title": "Explore Our Premium Commodities",
+    "subtitle": "High-quality natural resources processed to meet global standards.",
+    "items": {
+      "charcoal": {
+        "title": "Coconut Shell Charcoal",
+        "desc": "Premium briquettes and natural charcoal for shisha and BBQ, offering high heat and low ash."
+      },
+      "coconut": {
+        "title": "Fresh & Semi-Husked Coconut",
+        "desc": "Carefully selected mature coconuts, rich in meat and water, perfect for industrial processing."
+      },
+      "candlenut": {
+        "title": "Premium Candlenut",
+        "desc": "High-grade whole candlenuts, essential for culinary uses and oil extraction."
+      }
+    },
+    "btn": "View Details"
+  },
+  "footer": {
+    "company_desc": "Exporting Indonesia's finest agricultural products to the world.",
+    "quick_links": "Quick Links",
+    "contact": "Contact Us",
+    "address": "Indonesia",
+    "rights": "All rights reserved."
+  },
+
+  "charcoal_page": {
+    "title": "Coconut Shell Charcoal Briquettes",
+    "desc": "Premium grade briquettes specially crafted for Shisha/Hookah and BBQ. Manufactured using 100% natural coconut shells from Indonesia, ensuring long burning time, high heat, zero chemical additives, and very low ash.",
+    "specs_title": "Technical Specifications",
+    "pack_title": "Packaging & Loading Capacity",
+    "specs": {
+      "ash": "Max 2.5%",
+      "carbon": "Min 75% - 80%",
+      "moisture": "Max 5%",
+      "volatile": "Max 15%",
+      "calorie": "Min 7200 Kcal/kg",
+      "burning": "2 - 2.5 Hours",
+      "shape": "Cube (22mm, 25mm, 26mm), Hexagonal"
+    },
+    "packaging": {
+      "inner": "Inner Box with Plastic Liner (1kg / 2kg)",
+      "master": "Master Carton Box (10kg / 20kg)",
+      "custom": "OEM / Custom Brand Available",
+      "load_20ft": "Approx. 18 Metric Tons",
+      "load_40ft": "Approx. 25-26 Metric Tons"
+    }
+  },
+  "coconut_page": {
+    "title": "Fresh Semi-Husked Coconut",
+    "desc": "Carefully selected mature coconuts originating from the best plantations in Indonesia. Ideal for industrial processing, coconut milk extraction, desiccated coconut, and daily consumption.",
+    "specs_title": "Product Specifications",
+    "pack_title": "Packaging & Delivery",
+    "specs": {
+      "type": "Semi-Husked Mature Coconut",
+      "weight": "800g - 1200g+ per piece",
+      "color": "Light Brown / Brown",
+      "grade": "A / B / C Available",
+      "shelf_life": "60 Days (in proper storage)"
+    },
+    "packaging": {
+      "bag": "Mesh Bag / Gunny Bag",
+      "qty": "25 - 30 pieces per bag",
+      "weight_bag": "Approx. 25kg - 30kg per bag",
+      "load_40ft": "Approx. 25 Metric Tons (900 - 1000 bags)"
+    }
+  }, 
+
+  "about_page": {
+    "title": "About CV. Indo Nusantara",
+    "subtitle": "Connecting Indonesia's rich natural resources with the global market.",
+    "story_title": "Our Story",
+    "story_desc": "Cococarbone operates under CV. Indo Nusantara, a legally registered export company in Indonesia. We started with a vision to empower local farmers and deliver the highest quality agricultural commodities to international buyers. With strict quality control and a deep understanding of global logistics, we ensure every shipment meets your expectations.",
+    "vision_title": "Our Vision",
+    "vision_desc": "To be the most trusted and reliable supplier of Indonesian agricultural products worldwide, promoting sustainable and fair trade.",
+    "mission_title": "Our Mission",
+    "mission_desc": "Delivering premium quality continuously, maintaining transparent B2B relationships, and ensuring on-time global delivery."
+  },
+  "products_page": {
+    "title": "Our Catalog",
+    "subtitle": "Browse our selection of premium export-ready commodities."
+  },
+  "contact_page": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to order or need a custom quotation? We are here to help.",
+    "office": "Head Office",
+    "whatsapp": "Chat on WhatsApp",
+    "email": "Email Us"
+  }, 
+
+  "candlenut_page": {
+    "title": "Premium Whole Candlenut",
+    "desc": "High-quality candlenuts sourced from the best plantations in Eastern Indonesia. Our candlenuts are carefully processed to maintain their natural oil content and creamy white color, perfect for industrial oil extraction and culinary excellence.",
+    "specs_title": "Product Specifications",
+    "pack_title": "Packaging & Delivery",
+    "specs": {
+      "type": "Whole Peeled Candlenut",
+      "color": "Creamy White",
+      "moisture": "Max 5%",
+      "quality": "Grade A / Premium",
+      "foreign": "Negligible"
+    },
+    "packaging": {
+      "bag": "Double Layer Plastic or Gunny Bag",
+      "weight": "25kg - 50kg per bag",
+      "custom": "Bulk packaging available on request",
+      "load_20ft": "Approx. 15-17 Metric Tons"
+    }
+  }
+}
