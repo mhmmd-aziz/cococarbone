@@ -2,30 +2,36 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Target, Compass, ShieldCheck } from 'lucide-react';
 
+import Stack from '../components/ReactBits/Stack';
+import TextPressure from '../components/ReactBits/TextPressure';
+import bgKelapa from '../assets/BgKelapa.jpg';
+import bgDaun from '../assets/BgDaun.jpg';
+import arang from '../assets/product-charcoal.png';
+import kelapa from '../assets/product-coconut.png';
+
+const stackImages = [bgKelapa, bgDaun, arang, kelapa];
+
 export default function About() {
   const { t } = useTranslation();
 
   return (
-    <div className="bg-background pb-20">
-      {/* Header */}
-      <div className="bg-primary-dark pt-32 pb-20 px-6 text-center">
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          className="text-4xl md:text-5xl font-bold text-white mb-4"
-        >
-          {t('about_page.title')}
-        </motion.h1>
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ delay: 0.1 }}
-          className="text-gray-300 text-lg max-w-2xl mx-auto"
-        >
-          {t('about_page.subtitle')}
-        </motion.p>
+    <div className="bg-white pb-20">
+      {/* Interactive TextPressure Header */}
+      <div className="relative w-full h-[250px] md:h-[400px] flex items-center justify-center overflow-hidden mb-8 mt-16 px-4 cursor-crosshair">
+        <div className="w-full h-full max-w-7xl mx-auto pt-10">
+          <TextPressure
+            text="ABOUT US"
+            flex={true}
+            alpha={true}
+            stroke={false}
+            width={true}
+            weight={true}
+            italic={true}
+            textColor="#14452F"
+            strokeColor="#18A19A"
+            minFontSize={80}
+          />
+        </div>
       </div>
 
       {/* Main Content */}
@@ -51,9 +57,21 @@ export default function About() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.3 }}
-              className="md:w-1/2 w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg"
+              className="md:w-1/2 w-full h-80 md:h-[450px]"
             >
-              <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1000&auto=format&fit=crop" alt="Agriculture" className="w-full h-full object-cover" />
+              <Stack
+                randomRotation={true}
+                sensitivity={180}
+                sendToBackOnClick={true}
+                cards={stackImages.map((src, i) => (
+                  <img 
+                    key={i} 
+                    src={src} 
+                    alt={`Our Story Snapshot ${i + 1}`} 
+                    className="w-full h-full object-cover rounded-[2rem] shadow-[0_20px_40px_rgba(20,69,47,0.15)]"
+                  />
+                ))}
+              />
             </motion.div>
           </div>
         </div>

@@ -1,112 +1,173 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence, type Variants } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight, Leaf } from 'lucide-react';
-import CTAWhatsapp from '../components/CTAWhatsapp';
+import { Link } from 'react-router-dom';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Typewriter } from '../components/ReactBits/Typewriter';
+import BlurText from '../components/ReactBits/BlurText';
+import { ShinyText } from '../components/ReactBits/ShinyText';
+import LineWaves from '../components/ReactBits/LineWaves';
 
-import imgKelapa from '../assets/kelapa.png';
-import imgKemiri from '../assets/kemiri.png';
-import imgArang from '../assets/arang.png';
+import arangNoBg from '../assets/arangNoBg.png';
+import kelapaNoBg from '../assets/kelapaNoBg.png';
+// import kemiriNoBg from '../assets/kemiriNoBg.png';
+
+const heroImages = [
+  { id: 1, src: arangNoBg, alt: 'Premium Coconut Charcoal' },
+  { id: 2, src: kelapaNoBg, alt: 'Fresh Indonesian Coconuts' },
+  // { id: 3, src: kemiriNoBg, alt: 'High Quality Candlenuts' }
+];
 
 export default function Hero() {
   const { t } = useTranslation();
-  const [currentImage, setCurrentImage] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const backgroundImages = [imgKelapa, imgKemiri, imgArang];
-
+  // Optional: Auto-slide every 5 seconds.
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % backgroundImages.length);
-    }, 5000); 
+      handleNext();
+    }, 5000);
     return () => clearInterval(timer);
-  }, [backgroundImages.length]);
+  }, [currentIndex]);
 
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2, delayChildren: 0.3 }
-    }
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? heroImages.length - 1 : prev - 1));
   };
 
-  const itemVariants: Variants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } }
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev === heroImages.length - 1 ? 0 : prev + 1));
   };
 
   return (
-    <section className="relative min-h-[90vh] md:min-h-screen flex items-center overflow-hidden bg-carbone-light">
+    <section className="relative min-h-screen bg-white flex items-center overflow-hidden">
       
-      {/* Background Image Slideshow */}
-      <AnimatePresence mode="wait">
-        <motion.img
-          key={currentImage}
-          src={backgroundImages[currentImage]}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
-          className="absolute inset-0 w-full h-full object-cover z-0"
-          alt="Cococarbone Plantation"
-        />
-      </AnimatePresence>
-
-      {/* Overlay Dipertebal Biar Teks Makin Kontras */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/30 z-10" />
-
-      {/* Konten Teks */}
-      <div className="relative z-20 px-6 mx-auto max-w-7xl lg:px-8 w-full mt-16 md:mt-0">
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="flex flex-col space-y-6 md:space-y-8 max-w-2xl"
-        >
-          {/* Badge 
-          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-green-500/50 bg-black/40 text-green-400 backdrop-blur-md w-max shadow-lg">
-            <Leaf size={16} className="text-green-400" />
-            <span className="text-sm font-bold tracking-wider uppercase">Premium Agricultural Export</span>
-          </motion.div> */}
-
-          {/* Judul Utama */}
-          <motion.h1 variants={itemVariants} className="text-5xl lg:text-7xl font-extrabold text-white leading-tight drop-shadow-xl">
-            {t('hero.title')} <br />
-            {/* Warna hijau daun yang terang biar pop-out tapi tetap tema agrikultur */}
-            <span className="text-green-400 drop-shadow-lg">From Indonesia.</span>
+      {/* Background Pattern (Minimalist Grid & Ambient Natural Glow) */}
+      <div 
+        className="absolute inset-0 z-0 pointer-events-none opacity-[0.04]"
+        style={{
+          backgroundImage: `radial-gradient(#14452F 2px, transparent 2px)`,
+          backgroundSize: '32px 32px'
+        }}
+      />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] md:w-[800px] md:h-[800px] bg-emerald-400/5 rounded-full blur-[100px] md:blur-[150px] -translate-y-1/2 translate-x-1/3 pointer-events-none mix-blend-multiply" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-[#14452F]/5 rounded-full blur-[100px] md:blur-[150px] translate-y-1/3 -translate-x-1/4 pointer-events-none mix-blend-multiply" />
+      
+      {/* Container */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full flex flex-col md:flex-row items-center justify-between pt-20">
+        
+        {/* Left Content Area */}
+        <div className="w-full md:w-1/2 z-10 text-[#14452F] flex flex-col pt-10 md:pt-0 md:-mt-16 lg:-mt-24 pointer-events-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-xl md:text-2xl font-medium tracking-wide mb-2 text-[#14452F]/80"
+          >
+            <ShinyText text="Welcome to" speed={3} />
+          </motion.h2>
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+            className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold leading-[1.05] mb-6 tracking-tight overflow-hidden"
+          >
+            <BlurText 
+              text="Cococarbone"
+              delay={50}
+              animateBy="letters"
+              direction="bottom"
+              className="text-[#14452F]"
+            />
           </motion.h1>
-
-          {/* Subtitle - Warna diperputih dan ditebalkan dikit */}
-          <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-100 font-medium leading-relaxed max-w-xl drop-shadow-md">
-            {t('hero.subtitle')}
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="text-[#14452F]/80 text-sm md:text-base leading-relaxed max-w-md mb-10"
+          >
+            Discover the highest quality coconut charcoal briquettes directly from Indonesia. Sustainable, long-lasting, and meticulously crafted for your needs.
           </motion.p>
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            className="flex items-center gap-4"
+          >
+            <Link 
+              to="/products"
+              className="bg-[#14452F] text-white px-8 py-3.5 rounded-full font-semibold hover:bg-[#14452F]/90 transition-all shadow-lg"
+            >
+              Learn More
+            </Link>
+            <Link 
+              to="/contact"
+              className="border border-[#14452F] text-[#14452F] px-8 py-3.5 rounded-full font-semibold hover:bg-[#14452F] hover:text-white transition-all"
+            >
+              Contact Us
+            </Link>
+          </motion.div>
+        </div>
 
-          {/* Tombol Aksi */}
-          <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 pt-4">
-            {/* Tombol WA pakai aksen warna asli WhatsApp + efek glowing */}
-            <CTAWhatsapp text={t('hero.cta')} className="!bg-[#25D366] hover:!bg-[#20bd5a] !text-white !shadow-xl !shadow-[#25D366]/30 border border-[#25D366]/50" />
-            
-            {/* Tombol Explore bordernya lebih tebal biar jelas */}
-            <button className="flex items-center gap-2 px-8 py-4 font-bold text-white border-2 border-white/80 rounded-full hover:bg-white hover:text-primary transition-all backdrop-blur-md shadow-lg">
-              Explore Products <ArrowRight size={20} />
-            </button>
+        {/* Right Image/Product Area */}
+        <div className="w-full md:w-1/2 relative h-[380px] md:h-[450px] lg:h-[550px] flex items-center justify-center mt-8 md:mt-0 z-10 pointer-events-none">
+          
+          {/* Main Floating Product Carousel */}
+          <motion.div 
+            animate={{ y: [-15, 15] }}
+            transition={{ 
+              y: { duration: 4, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }
+            }}
+            className="relative z-20 w-[85%] md:w-[115%] lg:w-[120%] -ml-0 lg:-ml-10 flex items-center justify-center h-full"
+          >
+            <AnimatePresence mode="wait">
+              <motion.img 
+                key={currentIndex}
+                initial={{ opacity: 0, scale: 0.8, x: 20 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                exit={{ opacity: 0, scale: 0.8, x: -20 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                src={heroImages[currentIndex].src} 
+                alt={heroImages[currentIndex].alt}
+                className="w-full max-h-[90%] object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.4)]"
+              />
+            </AnimatePresence>
           </motion.div>
 
-        </motion.div>
+          {/* Carousel Controls */}
+          <div className="absolute bottom-2 md:bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4 z-40 pointer-events-auto">
+            <button 
+              onClick={handlePrev} 
+              className="p-2 bg-white/80 backdrop-blur-md border border-[#14452F]/10 rounded-full shadow-lg hover:bg-[#14452F] hover:text-white transition-all text-[#14452F]"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <div className="flex gap-2.5 items-center">
+              {heroImages.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentIndex(i)}
+                  className={`rounded-full transition-all duration-300 ${
+                    i === currentIndex ? 'w-8 h-2.5 bg-[#14452F]' : 'w-2.5 h-2.5 bg-[#14452F]/20 hover:bg-[#14452F]/40'
+                  }`}
+                />
+              ))}
+            </div>
+            <button 
+              onClick={handleNext} 
+             className="p-2 bg-white/80 backdrop-blur-md border border-[#14452F]/10 rounded-full shadow-lg hover:bg-[#14452F] hover:text-white transition-all text-[#14452F]"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
 
-        {/* Indikator Slideshow */}
-        <div className="absolute bottom-10 left-6 lg:left-8 z-30 flex gap-2">
-          {backgroundImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentImage(index)}
-              className={`h-1.5 rounded-full transition-all duration-300 shadow-sm ${
-                currentImage === index ? 'w-8 bg-green-400' : 'w-4 bg-white/50 hover:bg-white/80'
-              }`}
-            />
-          ))}
+          {/* Floating Element 1 - Top Left */}
+
+
+
         </div>
       </div>
-
     </section>
   );
 }
