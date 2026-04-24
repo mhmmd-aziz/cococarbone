@@ -115,19 +115,44 @@
     "vision_title": "Visi Kami",
     "vision_desc": "Menjadi pemasok produk pertanian Indonesia yang paling tepercaya dan andal di seluruh dunia, mempromosikan perdagangan yang berkelanjutan dan adil.",
     "mission_title": "Misi Kami",
-    "mission_desc": "Memberikan kualitas premium secara berkelanjutan, menjaga hubungan B2B yang transparan, dan memastikan pengiriman global tepat waktu."
+    "mission_desc": "Memberikan kualitas premium secara berkelanjutan, menjaga hubungan B2B yang transparan, dan memastikan pengiriman global tepat waktu.",
+    "values_title": "Nilai Inti Kami",
+    "values_subtitle": "Prinsip-prinsip yang memandu setiap langkah kami di pasar global.",
+    "values": {
+      "quality": {
+        "title": "Kualitas Tanpa Kompromi",
+        "desc": "Kami menjaga standar ketat dari perkebunan hingga pelabuhan, memastikan hanya produk terbaik yang sampai ke klien kami."
+      },
+      "sustainability": {
+        "title": "Keberlanjutan Ekosistem",
+        "desc": "Proses kami dirancang agar ramah lingkungan, mendukung kesehatan jangka panjang planet kita."
+      },
+      "integrity": {
+        "title": "Integritas Global",
+        "desc": "Transparansi dan kejujuran adalah inti dari hubungan B2B kami di seluruh dunia."
+      }
+    }
   },
   "products_page": {
     "title": "Katalog Kami",
     "subtitle": "Jelajahi pilihan komoditas premium kami yang siap ekspor."
   },
-  "contact_page": {
-    "title": "Hubungi Kami",
-    "subtitle": "Siap untuk memesan atau butuh penawaran khusus? Kami siap membantu.",
-    "office": "Kantor Pusat",
-    "whatsapp": "Chat di WhatsApp",
-    "email": "Kirim Email"
-  }, 
+    "contact_page": {
+      "title": "Hubungi Kami",
+      "subtitle": "Siap untuk memesan atau butuh penawaran khusus? Kami siap membantu.",
+      "office": "Kantor Pusat",
+      "whatsapp": "Chat di WhatsApp",
+      "email": "Kirim Email",
+      "newsletter_title": "Newsletter Kami",
+      "newsletter_desc": "Dapatkan informasi terbaru tentang produk, wawasan pasar, dan berita ekspor kami.",
+      "form": {
+        "name": "Nama",
+        "email": "Email",
+        "phone": "Telepon",
+        "message": "Pesan",
+        "submit": "Kirim"
+      }
+    }, 
 
   "candlenut_page": {
     "title": "Kemiri Utuh Premium",

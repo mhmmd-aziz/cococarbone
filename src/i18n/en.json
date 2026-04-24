@@ -115,19 +115,44 @@
     "vision_title": "Our Vision",
     "vision_desc": "To be the most trusted and reliable supplier of Indonesian agricultural products worldwide, promoting sustainable and fair trade.",
     "mission_title": "Our Mission",
-    "mission_desc": "Delivering premium quality continuously, maintaining transparent B2B relationships, and ensuring on-time global delivery."
+    "mission_desc": "Delivering premium quality continuously, maintaining transparent B2B relationships, and ensuring on-time global delivery.",
+    "values_title": "Our Core Values",
+    "values_subtitle": "The principles that guide our every move in the global market.",
+    "values": {
+      "quality": {
+        "title": "Uncompromised Quality",
+        "desc": "We maintain rigorous standards from plantation to port, ensuring only the finest products reach our clients."
+      },
+      "sustainability": {
+        "title": "Eco-Sustainability",
+        "desc": "Our processes are designed to be environmentally friendly, supporting the long-term health of our planet."
+      },
+      "integrity": {
+        "title": "Global Integrity",
+        "desc": "Transparency and honesty are at the heart of our B2B relationships worldwide."
+      }
+    }
   },
   "products_page": {
     "title": "Our Catalog",
     "subtitle": "Browse our selection of premium export-ready commodities."
   },
-  "contact_page": {
-    "title": "Get In Touch",
-    "subtitle": "Ready to order or need a custom quotation? We are here to help.",
-    "office": "Head Office",
-    "whatsapp": "Chat on WhatsApp",
-    "email": "Email Us"
-  }, 
+    "contact_page": {
+      "title": "Get In Touch",
+      "subtitle": "Ready to order or need a custom quotation? We are here to help.",
+      "office": "Head Office",
+      "whatsapp": "Chat on WhatsApp",
+      "email": "Email Us",
+      "newsletter_title": "Our Newsletters",
+      "newsletter_desc": "Stay updated with our latest products, market insights, and export news.",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "message": "Message",
+        "submit": "Submit"
+      }
+    }, 
 
   "candlenut_page": {
     "title": "Premium Whole Candlenut",
