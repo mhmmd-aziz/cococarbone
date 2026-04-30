@@ -32,16 +32,11 @@ export default function Contact() {
       return;
     }
     const text = encodeURIComponent(
-      `Hello, Cococarbone! 👋\n\n` +
-      `━━━━━━━━━━━━━━━━━━\n` +
-      `📋 *INQUIRY FORM*\n` +
-      `━━━━━━━━━━━━━━━━━━\n` +
-      `👤 *Name:* ${formData.name}\n` +
-      `📧 *Email:* ${formData.email}\n` +
-      `📞 *Phone:* ${formData.phone || '-'}\n\n` +
-      `💬 *Message:*\n${formData.message}\n` +
-      `━━━━━━━━━━━━━━━━━━\n` +
-      `_Sent via cococarbone.com_`
+      `*New Inquiry via Website*\n\n` +
+      `*Name:* ${formData.name}\n` +
+      `*Email:* ${formData.email}\n` +
+      `*Phone:* ${formData.phone || '-'}\n\n` +
+      `*Message:*\n${formData.message}`
     );
     window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, '_blank');
     setFormData({ name: '', email: '', phone: '', message: '' });
@@ -59,7 +54,7 @@ export default function Contact() {
     const stored: string[] = JSON.parse(localStorage.getItem('coco_subscribers') || '[]');
     if (stored.includes(subEmail.toLowerCase())) {
       setSubStatus('already');
-      showToast('This email is already subscribed! 🎉', 'info');
+      showToast('This email is already subscribed! ', 'info');
       setTimeout(() => setSubStatus('idle'), 2000);
       return;
     }
@@ -283,4 +278,4 @@ export default function Contact() {
       </motion.div>
     </div>
   );
-}
+}

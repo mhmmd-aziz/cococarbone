@@ -171,7 +171,7 @@ export default function Coconut() {
                 <p className="text-sm font-medium text-gray-500 mb-5">
                   Need CIF pricing or specific packaging for mature coconut? Send us a message!
                 </p>
-                <CTAWhatsapp text="Inquire Now" className="w-full !rounded-none py-4 text-lg" />
+                <CTAWhatsapp text={t('coconut_page.inquire_btn')} productName="Mature Coconut (Kelapa Tua)" className="w-full !rounded-none py-4 text-lg" />
               </div>
             </div>
 

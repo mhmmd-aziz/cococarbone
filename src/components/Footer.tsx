@@ -98,7 +98,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={15} strokeWidth={2} className="shrink-0 mt-0.5 text-[#14452F]/40" />
-                <a href="mailto:exportcococarbone@gmail.com" className="hover:text-[#14452F] transition-colors text-xs leading-snug">
+                <a href="mailto:[EMAIL_ADDRESS]" className="hover:text-[#14452F] transition-colors text-xs leading-snug">
                   exportcococarbone@gmail.com
                 </a>
               </li>

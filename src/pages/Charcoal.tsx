@@ -175,7 +175,7 @@ export default function Charcoal() {
                 <p className="text-sm font-medium text-gray-500 mb-5">
                   Need a custom specification or brand packaging (OEM)? Reach out to our team.
                 </p>
-                <CTAWhatsapp text="Request Quotation" className="w-full !rounded-none py-4 text-lg" />
+                <CTAWhatsapp text={t('charcoal_page.quote_btn')} productName="Premium Coconut Shell Charcoal" className="w-full !rounded-none py-4 text-lg" />
               </div>
             </div>
 

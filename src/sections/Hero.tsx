@@ -142,6 +142,7 @@ export default function Hero() {
           <div className="absolute bottom-2 md:bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4 z-40 pointer-events-auto">
             <button 
               onClick={handlePrev} 
+              aria-label="Previous slide"
               className="p-2 bg-white/80 backdrop-blur-md border border-[#14452F]/10 rounded-full shadow-lg hover:bg-[#14452F] hover:text-white transition-all text-[#14452F]"
             >
               <ChevronLeft size={20} />
@@ -150,6 +151,7 @@ export default function Hero() {
               {heroImages.map((_, i) => (
                 <button
                   key={i}
+                  aria-label={`Go to slide ${i + 1}`}
                   onClick={() => setCurrentIndex(i)}
                   className={`rounded-full transition-all duration-300 ${
                     i === currentIndex ? 'w-8 h-2.5 bg-[#14452F]' : 'w-2.5 h-2.5 bg-[#14452F]/20 hover:bg-[#14452F]/40'
@@ -159,6 +161,7 @@ export default function Hero() {
             </div>
             <button 
               onClick={handleNext} 
+              aria-label="Next slide"
              className="p-2 bg-white/80 backdrop-blur-md border border-[#14452F]/10 rounded-full shadow-lg hover:bg-[#14452F] hover:text-white transition-all text-[#14452F]"
             >
               <ChevronRight size={20} />

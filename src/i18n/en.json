@@ -66,6 +66,7 @@
     "desc": "Premium grade carbon charcoal specially crafted for Shisha/Hookah and BBQ. Produced using 100% natural coconut shells from Indonesia, delivering exceptional long burn time, intense & stable heat, zero chemical additives, and ultra-low ash residue.",
     "specs_title": "Technical Specifications",
     "pack_title": "Packaging & Loading Capacity",
+    "quote_btn": "Request Quotation",
     "specs": {
       "ash": "Max 2.5%",
       "carbon": "Min 75% - 80%",
@@ -88,8 +89,9 @@
     "desc": "Export-grade mature coconuts sourced from the finest plantations across Indonesia. Characterized by thick white coconut meat and abundant water content, our mature coconuts are perfectly suited for industrial processing-including coconut oil extraction, desiccated coconut, coconut milk, and other coconut-based derivatives.",
     "specs_title": "Product Specifications",
     "pack_title": "Packaging & Delivery",
+    "inquire_btn": "Inquire Now",
     "specs": {
-      "type": "Mature Coconut (Kelapa Tua)",
+      "type": "Mature Coconut",
       "weight": "800g - 1500g+ per piece",
       "color": "Brown / Dark Brown",
       "grade": "A / B Available",
