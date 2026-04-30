@@ -3,17 +3,19 @@
     "home": "Beranda",
     "about": "Tentang Kami",
     "products": "Produk",
-    "contact": "Kontak"
+    "contact": "Kontak",
+    "shopNow": "Beli Sekarang"
   },
   "hero": {
-    "title": "Ekspor Kelapa Premium",
-    "subtitle": "Meningkatkan operasi pertanian ke tingkat yang lebih tinggi dengan produk kelapa dan arang berkualitas tinggi kami.",
+    "welcome": "Selamat Datang di",
+    "title": "Ekspor Arang Carbon & Kelapa Tua Premium",
+    "subtitle": "Eksportir terpercaya Indonesia untuk arang carbon kelapa premium dan kelapa tua, melayani mitra B2B di seluruh dunia.",
     "cta": "Hubungi via WhatsApp"
   },
   "about_preview": {
     "badge": "Tentang Cococarbone",
-    "title": "Mitra Terpercaya Anda untuk Pasokan Kelapa & Arang Global",
-    "desc": "Berbasis di Indonesia, kami berspesialisasi dalam mengekspor produk kelapa dan arang premium ke pasar global. Kami menjaga kontrol kualitas yang ketat dari perkebunan kami langsung ke pelabuhan Anda, memastikan Anda mendapatkan yang terbaik dari alam.",
+    "title": "Mitra Terpercaya Anda untuk Arang Carbon & Kelapa Tua",
+    "desc": "Berbasis di Indonesia, kami berspesialisasi dalam mengekspor arang carbon kelapa premium dan kelapa tua ke pasar global. Kami menjaga kontrol kualitas yang ketat dari perkebunan kami langsung ke pelabuhan Anda, memastikan Anda mendapatkan yang terbaik dari alam.",
     "btn": "Pelajari Lebih Lanjut",
     "stats": {
       "cap": "Kapasitas Volume",
@@ -43,16 +45,12 @@
     "subtitle": "Sumber daya alam berkualitas tinggi yang diproses untuk memenuhi standar global.",
     "items": {
       "charcoal": {
-        "title": "Arang Batok Kelapa",
-        "desc": "Briket premium dan arang natural untuk shisha dan BBQ, menawarkan panas tinggi dan abu rendah."
+        "title": "Arang Carbon Kelapa",
+        "desc": "Arang carbon premium berbahan 100% batok kelapa alami untuk shisha dan BBQ, menghasilkan panas tinggi dan abu yang sangat rendah."
       },
       "coconut": {
-        "title": "Kelapa Segar & Semi-Husked",
-        "desc": "Kelapa tua pilihan, kaya akan daging dan air, sangat cocok untuk pemrosesan industri."
-      },
-      "candlenut": {
-        "title": "Kemiri Premium",
-        "desc": "Kemiri utuh berkualitas tinggi, penting untuk keperluan kuliner dan ekstraksi minyak."
+        "title": "Kelapa Tua",
+        "desc": "Kelapa tua berkualitas ekspor dengan daging tebal dan kandungan air tinggi-ideal untuk industri pengolahan minyak kelapa, kelapa parut kering, dan santan."
       }
     },
     "btn": "Lihat Detail"
@@ -61,13 +59,13 @@
     "company_desc": "Mengekspor produk pertanian terbaik Indonesia ke seluruh dunia.",
     "quick_links": "Tautan Cepat",
     "contact": "Hubungi Kami",
-    "address": "Indonesia",
+    "address": "Jalan Bajak 2 H, Komplek ITM No. A2, Medan - Sumatera Utara",
     "rights": "Hak cipta dilindungi undang-undang."
   }, 
 
   "charcoal_page": {
-    "title": "Briket Arang Batok Kelapa",
-    "desc": "Briket kelas premium yang dirancang khusus untuk Shisha/Hookah dan BBQ. Diproduksi menggunakan 100% batok kelapa alami dari Indonesia, memastikan waktu bakar yang lama, panas tinggi, tanpa bahan kimia, dan abu yang sangat rendah.",
+    "title": "Arang Carbon Kelapa",
+    "desc": "Arang carbon kelas premium yang dirancang khusus untuk Shisha/Hookah dan BBQ. Diproduksi menggunakan 100% batok kelapa alami dari Indonesia, memberikan waktu bakar yang lama, panas yang intens & stabil, tanpa bahan kimia tambahan, dan residu abu yang sangat rendah.",
     "specs_title": "Spesifikasi Teknis",
     "pack_title": "Pengemasan & Kapasitas Pemuatan",
     "specs": {
@@ -88,36 +86,41 @@
     }
   },
   "coconut_page": {
-    "title": "Kelapa Segar Semi-Husked",
-    "desc": "Kelapa tua pilihan yang berasal dari perkebunan terbaik di Indonesia. Ideal untuk keperluan industri, ekstraksi santan, kelapa parut kering, dan konsumsi harian.",
+    "title": "Kelapa Tua",
+    "desc": "Kelapa tua berkualitas ekspor yang bersumber dari perkebunan terbaik di seluruh Indonesia. Dicirikan dengan daging kelapa yang tebal dan putih serta kandungan air yang melimpah, kelapa tua kami sangat cocok untuk pemrosesan industri-termasuk ekstraksi minyak kelapa, kelapa parut kering, santan, dan turunan produk kelapa lainnya.",
     "specs_title": "Spesifikasi Produk",
     "pack_title": "Pengemasan & Pengiriman",
     "specs": {
-      "type": "Kelapa Tua Semi-Husked",
-      "weight": "800g - 1200g+ per butir",
-      "color": "Coklat Muda / Coklat",
-      "grade": "Tersedia Grade A / B / C",
+      "type": "Kelapa Tua",
+      "weight": "800g - 1500g+ per butir",
+      "color": "Coklat / Coklat Tua",
+      "grade": "Tersedia Grade A / B",
       "shelf_life": "60 Hari (penyimpanan yang tepat)"
     },
     "packaging": {
-      "bag": "Karung Jaring (Mesh Bag)",
+      "bag": "Karung Jaring / Karung Goni",
       "qty": "25 - 30 butir per karung",
-      "weight_bag": "Sekitar 25kg - 30kg per karung",
+      "weight_bag": "Sekitar 25kg - 35kg per karung",
       "load_40ft": "Sekitar 25 Metrik Ton (900 - 1000 karung)"
     }
   },
 
   "about_page": {
-    "title": "Tentang CV. Indo Nusantara",
+    "title": "Tentang CV. Gemilang Indo Nusantara",
     "subtitle": "Menghubungkan kekayaan sumber daya alam Indonesia dengan pasar global.",
     "story_title": "Cerita Kami",
-    "story_desc": "Cococarbone beroperasi di bawah CV. Indo Nusantara, perusahaan ekspor yang terdaftar resmi di Indonesia. Kami memulai dengan visi untuk memberdayakan petani lokal dan memberikan komoditas pertanian kualitas tertinggi kepada pembeli internasional. Dengan kontrol kualitas yang ketat dan pemahaman mendalam tentang logistik global, kami memastikan setiap pengiriman memenuhi harapan Anda.",
+    "story_desc": "Cococarbone beroperasi di bawah CV. Gemilang Indo Nusantara, perusahaan ekspor yang terdaftar resmi di Indonesia. Kami memulai dengan visi untuk memberdayakan petani lokal dan memberikan komoditas pertanian kualitas tertinggi kepada pembeli internasional. Dengan kontrol kualitas yang ketat dan pemahaman mendalam tentang logistik global, kami memastikan setiap pengiriman memenuhi harapan Anda.",
     "vision_title": "Visi Kami",
     "vision_desc": "Menjadi pemasok produk pertanian Indonesia yang paling tepercaya dan andal di seluruh dunia, mempromosikan perdagangan yang berkelanjutan dan adil.",
     "mission_title": "Misi Kami",
     "mission_desc": "Memberikan kualitas premium secara berkelanjutan, menjaga hubungan B2B yang transparan, dan memastikan pengiriman global tepat waktu.",
     "values_title": "Nilai Inti Kami",
     "values_subtitle": "Prinsip-prinsip yang memandu setiap langkah kami di pasar global.",
+    "legal_title": "Registrasi Legal Resmi",
+    "legal_desc": "Cococarbone beroperasi secara sah di bawah CV. Gemilang Indo Nusantara, yang terdaftar resmi di Kementerian Hukum dan Hak Asasi Manusia Republik Indonesia. Hal ini menjamin mitra global kami atas kepatuhan, transparansi, dan legitimasi bisnis kami.",
+    "legal_doc": "Nomor Registrasi: AHU-0027112-AH.01.14 ",
+    "facility_title": "Fasilitas & Produksi Kami",
+    "facility_desc": "Intip lini produksi dan gudang kami tempat kami memproses, menyortir, dan mengemas komoditas premium untuk memastikan kualitas terbaik sebelum dikirim ke pelabuhan Anda.",
     "values": {
       "quality": {
         "title": "Kualitas Tanpa Kompromi",
@@ -151,6 +154,12 @@
         "phone": "Telepon",
         "message": "Pesan",
         "submit": "Kirim"
+      },
+      "subscribe": {
+        "btn": "Berlangganan",
+        "loading": "Mendaftar...",
+        "success": "Berhasil Berlangganan! 🎉",
+        "already": "Sudah Berlangganan"
       }
     }, 
 
@@ -172,6 +181,24 @@
       "custom": "Tersedia kemasan curah sesuai permintaan",
       "load_20ft": "Sekitar 15-17 Metrik Ton"
     }
+  },
+  "how_to_buy": {
+    "title": "Cara Membeli Produk",
+    "title_brand": "CocoCarbone",
+    "subtitle": "Kami merancang proses pemesanan arang carbon kelapa premium kami menjadi transparan, aman, dan mudah bagi para mitra B2B di seluruh dunia. Ikuti tahapan terstruktur kami untuk memastikan pesanan Anda tiba tepat waktu.",
+    "back": "Sebelumnya",
+    "next": "Lanjut",
+    "finish": "Selesai",
+    "completed": "Anda sudah memahami semua tahapan! Siap untuk mulai berbisnis? Hubungi kami sekarang.",
+    "steps": {
+      "s1_title": "1. Ajukan Inkuiri",
+      "s1_desc": "Hubungi tim kami dan sampaikan spesifikasi produk yang Anda butuhkan (Grade, ukuran, tipe kemasan), serta estimasi volume pesanan dan pelabuhan tujuan pengiriman.",
+      "s2_title": "2. Konsultasi & Sampel",
+      "s2_desc": "Tim ahli kami akan mendiskusikan harga, kapasitas produksi, dan opsi private label jika diperlukan. Kami juga siap mengirimkan sampel produk agar Anda dapat menguji kualitasnya.",
+      "s3_title": "3. Sales Contract & DP",
+      "s3_desc": "Setelah kesepakatan tercapai, kami akan menerbitkan Proforma Invoice / Sales Contract. Anda dapat melakukan pembayaran Down Payment (DP) atau membuka L/C sesuai term pembayaran.",
+      "s4_title": "4. Produksi & Pengiriman",
+      "s4_desc": "Kami langsung memulai tahapan produksi, uji mutu QC, dan pengemasan. Produk kemudian akan dimuat ke kontainer beserta pengecekan dokumen ekspor secara lengkap."
+    }
   }
-
 }

@@ -6,7 +6,7 @@ interface CTAProps {
 }
 
 export default function CTAWhatsapp({ className, text }: CTAProps) {
-  const phone = "6281234567890"; // Ganti dengan nomor WA lu
+  const phone = "6281519646990"; // Ganti dengan nomor WA lu
   const message = "Hello Cococarbone, I'm interested in your products.";
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 

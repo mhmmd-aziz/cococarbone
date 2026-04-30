@@ -17,7 +17,7 @@ export default function AboutPreview() {
       title: "High",
       label: t('about_preview.stats.cap'),
       detailTitle: "High Volume Capacity",
-      description: "Kami memiliki kapasitas produksi yang besar untuk memenuhi permintaan global secara konsisten. Fasilitas kami mampu menghasilkan ribuan ton briket arang kelapa berkualitas tinggi setiap bulannya untuk melayani kebutuhan industri dan ritel di berbagai benua.",
+      description: "Kami memiliki kapasitas produksi yang besar untuk memenuhi permintaan global secara konsisten. Fasilitas kami mampu menghasilkan ribuan ton arang carbon kelapa berkualitas tinggi setiap bulannya untuk melayani kebutuhan industri dan ritel di berbagai benua.",
       extra: ["Kapasitas Produksi Masif", "Suplai Berkelanjutan", "Kontrol Kualitas Ketat"]
     },
     {
@@ -27,7 +27,7 @@ export default function AboutPreview() {
       label: t('about_preview.stats.qual'),
       className: "sm:translate-y-8",
       detailTitle: "100% Premium Grade",
-      description: "Hanya bahan baku kelapa terbaik yang kami gunakan. Briket kami memiliki kadar abu rendah, panas yang stabil, dan tanpa bahan kimia tambahan, menjadikannya standar emas untuk BBQ dan Shisha di pasar internasional.",
+      description: "Hanya bahan baku kelapa terbaik yang kami gunakan. Arang carbon kami memiliki kadar abu rendah, panas yang stabil, dan tanpa bahan kimia tambahan, menjadikannya standar emas untuk BBQ dan Shisha di pasar internasional.",
       extra: ["Kadar Abu Low (< 2.5%)", "Panas Maksimal", "Eco-Friendly"]
     },
     {
@@ -70,10 +70,16 @@ export default function AboutPreview() {
               {t('about_preview.desc')}
             </p>
             
-            <Link to="/about" className="inline-flex items-center gap-2 font-semibold transition-colors text-primary hover:text-primary-light group">
-              {t('about_preview.btn')}
-              <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
-            </Link>
+           <Link 
+            to="/about" 
+            className="group inline-flex items-center gap-5 px-2 py-2 pr-8 mt-6 text-xs font-bold text-white uppercase tracking-[0.2em] bg-[#14452F] rounded-full shadow-md hover:shadow-xl hover:shadow-[#14452F]/20 hover:-translate-y-0.5 transition-all duration-300"
+          >
+            {/* Lingkaran Ikon Interaktif */}
+            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white/15 text-white group-hover:bg-white group-hover:text-[#14452F] transition-colors duration-300">
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
+            </div>
+            <span>{t('about_preview.btn')}</span>
+          </Link>
           </motion.div>
 
           {/* Stats Grid */}

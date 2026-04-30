@@ -1,58 +1,133 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { CheckCircle2, Package, Flame, ArrowLeft } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Package, FileText, Settings2, ImageIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import CTAWhatsapp from '../components/CTAWhatsapp';
 
-// 1. Import gambar arang
-import imgCharcoal from '../assets/product-charcoal.png';
+// 1. Import semua gambar arang dari folder assets
+import imgCharcoal1 from '../assets/arang1.png';
+import imgCharcoal2 from '../assets/arang2.png';
+import imgCharcoal3 from '../assets/arang3.png';
+import imgCharcoal4 from '../assets/arang4.png';
+import imgSpekArang from '../assets/spek_arang.png'; // <-- Gambar Spek Arang
 
 export default function Charcoal() {
   const { t } = useTranslation();
+  
+  const gallery = [imgCharcoal1, imgCharcoal2, imgCharcoal3, imgCharcoal4];
+  const [activeImage, setActiveImage] = useState(gallery[0]);
 
   return (
-    <div className="bg-background pb-20">
-      {/* Hero Product */}
-      <div className="relative h-[40vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-carbone-light/80 z-10"></div>
+    <div className="bg-white min-h-screen pt-32 pb-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
-        {/* 2. Panggil gambar arangnya di sini */}
-        <img 
-          src={imgCharcoal} 
-          alt="Charcoal Briquettes" 
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        
-        <div className="relative z-20 text-center px-6 max-w-4xl mx-auto">
-          <Link to="/products" className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-colors">
-            <ArrowLeft size={20} /> Back to Products
-          </Link>
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-bold text-white mb-4"
+        {/* Top Action Bar */}
+        <motion.div 
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-12"
+        >
+          <Link 
+            to="/products" 
+            className="group inline-flex items-center gap-3 px-2 py-2 pr-6 text-xs font-bold text-[#14452F] uppercase tracking-[0.15em] bg-white border border-gray-200 rounded-full shadow-sm hover:shadow-md hover:border-[#14452F]/30 transition-all duration-300"
           >
-            {t('charcoal_page.title')}
-          </motion.h1>
-        </div>
-      </div>
+            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[#F8FAF8] text-[#14452F] group-hover:bg-[#14452F] group-hover:text-white transition-colors duration-300">
+              <ArrowLeft size={16} className="group-hover:-translate-x-0.5 transition-transform duration-300" />
+            </div>
+            Back to Products
+          </Link>
+        </motion.div>
 
-      {/* Content Section */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 -mt-16 relative z-30">
-        <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
           
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Left Col: Description & Specs */}
-            <div>
-              <h2 className="text-2xl font-bold text-primary mb-4 flex items-center gap-2">
-                <Flame className="text-coconut" /> Premium Quality
-              </h2>
-              <p className="text-carbone-light leading-relaxed mb-8 text-lg">
+          {/* Left Column: Product Image Gallery */}
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.1 }}
+            className="lg:col-span-5"
+          >
+            <div className="sticky top-32 space-y-4">
+              <div className="bg-[#F8FAF8] border border-gray-200 p-4 aspect-square flex items-center justify-center relative overflow-hidden">
+                <AnimatePresence mode="wait">
+                  <motion.img 
+                    key={activeImage}
+                    src={activeImage} 
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
+                    alt="Coconut Shell Charcoal" 
+                    className="w-full h-full object-cover shadow-sm"
+                  />
+                </AnimatePresence>
+              </div>
+
+              <div className="grid grid-cols-4 gap-4">
+                {gallery.map((img, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveImage(img)}
+                    className={`relative aspect-square overflow-hidden border-2 transition-all duration-300 ${
+                      activeImage === img 
+                        ? 'border-[#14452F] opacity-100' 
+                        : 'border-transparent opacity-60 hover:opacity-100 hover:border-gray-300'
+                    }`}
+                  >
+                    <img 
+                      src={img} 
+                      alt={`Thumbnail ${index + 1}`} 
+                      className="w-full h-full object-cover bg-[#F8FAF8]"
+                    />
+                  </button>
+                ))}
+              </div>
+              
+              <div className="flex justify-between items-center border border-gray-200 px-6 py-4 bg-gray-50 mt-4">
+                <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Origin</span>
+                <span className="text-sm font-bold text-[#14452F]">Indonesia</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right Column: Content & Specs */}
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+            className="lg:col-span-7 flex flex-col"
+          >
+            <div className="mb-10">
+              <h1 className="text-4xl md:text-5xl font-extrabold text-[#14452F] mb-6 leading-tight">
+                {t('charcoal_page.title')}
+              </h1>
+              <p className="text-gray-600 text-lg leading-relaxed">
                 {t('charcoal_page.desc')}
               </p>
+            </div>
 
-              <h3 className="text-xl font-bold text-carbone mb-6">{t('charcoal_page.specs_title')}</h3>
-              <div className="space-y-3">
+            {/* Visual Specification Sheet (INFOGRAFIS MASUK DI SINI) */}
+            <div className="mb-12">
+              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+                <ImageIcon size={16} /> Visual Specification Sheet
+              </h3>
+              <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 bg-[#F8FAF8] p-2">
+                <img 
+                  src={imgSpekArang} 
+                  alt="Charcoal Specification Data Sheet" 
+                  className="w-full h-auto object-contain rounded-xl"
+                />
+              </div>
+            </div>
+
+            {/* Technical Specifications Table (HTML) */}
+            <div className="mb-12">
+              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
+                <Settings2 size={16} /> Data Sheet Summary
+              </h3>
+              
+              <div className="border-t-2 border-[#14452F]">
                 {[
                   { label: "Ash Content", value: t('charcoal_page.specs.ash') },
                   { label: "Fixed Carbon", value: t('charcoal_page.specs.carbon') },
@@ -62,47 +137,51 @@ export default function Charcoal() {
                   { label: "Burning Time", value: t('charcoal_page.specs.burning') },
                   { label: "Available Shapes", value: t('charcoal_page.specs.shape') },
                 ].map((spec, i) => (
-                  <div key={i} className="flex justify-between items-center py-3 border-b border-gray-100 last:border-0">
-                    <span className="font-medium text-carbone-light">{spec.label}</span>
-                    <span className="font-bold text-carbone text-right">{spec.value}</span>
+                  <div key={i} className="flex flex-col sm:flex-row sm:justify-between py-4 border-b border-gray-100 group hover:bg-gray-50 transition-colors px-2">
+                    <span className="font-medium text-gray-500 mb-1 sm:mb-0">{spec.label}</span>
+                    <span className="font-bold text-[#14452F] text-left sm:text-right">{spec.value}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Right Col: Packaging & CTA */}
-            <div>
-              <div className="bg-background rounded-2xl p-8 border border-gray-200">
-                <h3 className="text-xl font-bold text-primary mb-6 flex items-center gap-2">
-                  <Package className="text-primary" /> {t('charcoal_page.pack_title')}
-                </h3>
-                
-                <ul className="space-y-4 mb-8">
-                  {[
-                    t('charcoal_page.packaging.inner'),
-                    t('charcoal_page.packaging.master'),
-                    t('charcoal_page.packaging.custom'),
-                    `20ft Container: ${t('charcoal_page.packaging.load_20ft')}`,
-                    `40ft Container: ${t('charcoal_page.packaging.load_40ft')}`
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-green-500 shrink-0 mt-0.5" />
-                      <span className="text-carbone-light font-medium">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+            {/* Packaging & Call to Action */}
+            <div className="bg-[#F8FAF8] border border-gray-200 p-8 lg:p-10 mt-auto relative overflow-hidden">
+              <div className="absolute -right-10 -top-10 opacity-5 pointer-events-none">
+                <Package size={200} />
+              </div>
 
-                <div className="pt-8 border-t border-gray-200">
-                  <p className="text-sm text-carbone-light mb-4">
-                    Ready to place an order or need a custom specification? Contact our sales team directly.
-                  </p>
-                  <CTAWhatsapp text="Request Quotation" className="w-full" />
-                </div>
+              <h3 className="text-xl font-bold text-[#14452F] mb-6 flex items-center gap-3 relative z-10">
+                <FileText size={24} className="text-[#18A19A]" /> 
+                {t('charcoal_page.pack_title')}
+              </h3>
+              
+              <ul className="space-y-4 mb-10 relative z-10">
+                {[
+                  t('charcoal_page.packaging.inner'),
+                  t('charcoal_page.packaging.master'),
+                  t('charcoal_page.packaging.custom'),
+                  `20ft Container: ${t('charcoal_page.packaging.load_20ft')}`,
+                  `40ft Container: ${t('charcoal_page.packaging.load_40ft')}`
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <CheckCircle2 size={20} className="text-[#18A19A] shrink-0 mt-0.5" />
+                    <span className="text-[#14452F]/80 font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="pt-8 border-t border-gray-200 relative z-10">
+                <p className="text-sm font-medium text-gray-500 mb-5">
+                  Need a custom specification or brand packaging (OEM)? Reach out to our team.
+                </p>
+                <CTAWhatsapp text="Request Quotation" className="w-full !rounded-none py-4 text-lg" />
               </div>
             </div>
-          </div>
 
+          </motion.div>
         </div>
+
       </div>
     </div>
   );

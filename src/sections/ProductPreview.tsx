@@ -1,12 +1,11 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronRight } from 'lucide-react'; // Tambah ChevronRight untuk variasi ikon
 
-// 1. Import semua gambar produk dari folder assets
-import imgCharcoal from '../assets/product-charcoal.png';
-import imgCoconut from '../assets/product-coconut.png';
-import imgCandlenut from '../assets/product-candlenut.png'; // <-- Import kemiri
+// Import semua gambar produk dari folder assets
+import imgCharcoal from '../assets/arang3.png';
+import imgCoconut from '../assets/kelapa2.png';
 
 export default function ProductPreview() {
   const { t } = useTranslation();
@@ -25,13 +24,6 @@ export default function ProductPreview() {
       desc: t('products_preview.items.coconut.desc'), 
       image: imgCoconut, 
       link: '/products/coconut' 
-    },
-    { 
-      id: 'candlenut', 
-      title: t('products_preview.items.candlenut.title'), 
-      desc: t('products_preview.items.candlenut.desc'), 
-      image: imgCandlenut, 
-      link: '/products/candlenut' // <-- Ganti di sini
     }
   ];
 
@@ -39,7 +31,7 @@ export default function ProductPreview() {
     <section className="py-24 bg-white border-t border-gray-100">
       <div className="px-6 mx-auto max-w-7xl lg:px-8">
         
-        {/* Header */}
+        {/* Header Tetap Sama */}
         <div className="flex flex-col items-center mb-16 text-center md:flex-row md:justify-between md:text-left">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
@@ -64,14 +56,14 @@ export default function ProductPreview() {
             viewport={{ once: false, amount: 0.5 }}
             className="mt-8 md:mt-0"
           >
-            <Link to="/products" className="inline-flex items-center gap-2 px-6 py-3 font-semibold transition-colors border-2 rounded-full text-primary border-primary hover:bg-primary hover:text-white">
+            {/* <Link to="/products" className="inline-flex items-center gap-2 px-6 py-3 font-semibold transition-colors border-2 rounded-full text-primary border-primary hover:bg-primary hover:text-white">
               View All Products <ArrowRight size={20} />
-            </Link>
+            </Link> */}
           </motion.div>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {/* Cards Grid - 2 Kolom, ditengah */}
+        <div className="grid gap-10 md:grid-cols-2 max-w-5xl mx-auto">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
@@ -79,17 +71,39 @@ export default function ProductPreview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="group flex flex-col bg-background rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300"
+              className="group flex flex-col bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-2xl transition-all duration-500"
             >
-              <div className="relative h-64 overflow-hidden">
-                <img src={product.image} alt={product.title} className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+              {/* Gambar Atas */}
+              <div className="relative h-72 overflow-hidden bg-gray-100">
+                <img 
+                  src={product.image} 
+                  alt={product.title} 
+                  className="object-cover w-full h-full transition-transform duration-1000 group-hover:scale-105" 
+                />
+                {/* Efek Vignette halus biar mewah */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-80 transition-opacity group-hover:opacity-100"></div>
               </div>
-              <div className="flex flex-col flex-grow p-8">
-                <h3 className="mb-3 text-2xl font-bold text-carbone group-hover:text-primary transition-colors">{product.title}</h3>
-                <p className="mb-6 leading-relaxed text-carbone-light flex-grow">{product.desc}</p>
-                <Link to={product.link} className="inline-flex items-center gap-2 font-semibold text-primary hover:text-primary-light">
-                  {t('products_preview.btn')} <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+
+              {/* Konten & Teks */}
+              <div className="flex flex-col flex-grow p-8 pb-6">
+                <h3 className="mb-3 text-2xl font-bold text-carbone group-hover:text-primary transition-colors">
+                  {product.title}
+                </h3>
+                <p className="mb-8 leading-relaxed text-carbone-light flex-grow">
+                  {product.desc}
+                </p>
+              </div>
+
+              {/* REDESIGN: Tombol View Details jadi Solid Block di bawah */}
+              <div className="px-8 pb-8 mt-auto">
+                <Link 
+                  to={product.link} 
+                  className="flex items-center justify-between w-full px-6 py-4 font-semibold text-white transition-all bg-primary rounded-xl hover:bg-primary-light hover:shadow-lg hover:shadow-primary/20 active:scale-[0.98]"
+                >
+                  <span className="tracking-wide uppercase text-sm">{t('products_preview.btn')}</span>
+                  <div className="p-1 bg-white/20 rounded-lg group-hover:bg-white group-hover:text-primary transition-colors">
+                    <ChevronRight size={18} />
+                  </div>
                 </Link>
               </div>
             </motion.div>

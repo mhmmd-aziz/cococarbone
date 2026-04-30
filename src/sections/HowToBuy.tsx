@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import Stepper, { Step } from '../components/ReactBits/Stepper';
 
 export default function HowToBuy() {
+  const { t } = useTranslation();
   const [isCompleted, setIsCompleted] = useState(false);
 
   return (
@@ -19,7 +21,7 @@ export default function HowToBuy() {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-5xl font-bold leading-tight"
             >
-              Cara Membeli Produk <span className="block mt-2 font-serif italic font-normal">CocoCarbone</span>
+              {t('how_to_buy.title')} <span className="block mt-2 font-serif italic font-normal">{t('how_to_buy.title_brand')}</span>
             </motion.h2>
             
             <motion.p 
@@ -29,7 +31,7 @@ export default function HowToBuy() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-lg text-[#14452F]/70 leading-relaxed max-w-lg mb-8"
             >
-              Kami merancang proses pemesanan briket arang kelapa premium kami menjadi transparan, aman, dan mudah bagi para mitra B2B di seluruh dunia. Ikuti tahapan terstruktur kami untuk memastikan pesanan Anda tiba tepat waktu.
+              {t('how_to_buy.subtitle')}
             </motion.p>
           </div>
 
@@ -43,44 +45,45 @@ export default function HowToBuy() {
             <Stepper
               initialStep={1}
               onFinalStepCompleted={() => setIsCompleted(true)}
-              backButtonText="Sebelumnya"
-              nextButtonText="Lanjut"
+              backButtonText={t('how_to_buy.back')}
+              nextButtonText={t('how_to_buy.next')}
+              finishButtonText={t('how_to_buy.finish')}
               disableStepIndicators={false}
               stepCircleContainerClassName="shadow-lg border border-[#e5e5e5] bg-white"
               contentClassName="text-[#14452F]"
             >
               <Step>
                 <div className="py-2">
-                  <h3 className="text-2xl font-bold mb-3 tracking-tight">1. Ajukan Inkuiri</h3>
+                  <h3 className="text-2xl font-bold mb-3 tracking-tight">{t('how_to_buy.steps.s1_title')}</h3>
                   <p className="text-[#14452F]/70 leading-relaxed">
-                    Hubungi tim kami dan sampaikan spesifikasi produk yang Anda butuhkan (Grade, ukuran, tipe kemasan), serta estimasi volume pesanan dan pelabuhan tujuan pengiriman.
+                    {t('how_to_buy.steps.s1_desc')}
                   </p>
                 </div>
               </Step>
 
               <Step>
                 <div className="py-2">
-                  <h3 className="text-2xl font-bold mb-3 tracking-tight">2. Konsultasi & Sampel</h3>
+                  <h3 className="text-2xl font-bold mb-3 tracking-tight">{t('how_to_buy.steps.s2_title')}</h3>
                   <p className="text-[#14452F]/70 leading-relaxed">
-                    Tim ahli kami akan mendiskusikan harga, kapasitas produksi, dan opsi private label jika diperlukan. Kami juga siap mengirimkan sampel produk agar Anda dapat menguji kualitasnya.
+                    {t('how_to_buy.steps.s2_desc')}
                   </p>
                 </div>
               </Step>
 
               <Step>
                 <div className="py-2">
-                  <h3 className="text-2xl font-bold mb-3 tracking-tight">3. Sales Contract & DP</h3>
+                  <h3 className="text-2xl font-bold mb-3 tracking-tight">{t('how_to_buy.steps.s3_title')}</h3>
                   <p className="text-[#14452F]/70 leading-relaxed">
-                    Setelah kesepakatan tercapai, kami akan menerbitkan Proforma Invoice / Sales Contract. Anda dapat melakukan pembayaran Down Payment (DP) atau membuka L/C sesuai term pembayaran.
+                    {t('how_to_buy.steps.s3_desc')}
                   </p>
                 </div>
               </Step>
 
               <Step>
                 <div className="py-2">
-                  <h3 className="text-2xl font-bold mb-3 tracking-tight">4. Produksi & Pengiriman</h3>
+                  <h3 className="text-2xl font-bold mb-3 tracking-tight">{t('how_to_buy.steps.s4_title')}</h3>
                   <p className="text-[#14452F]/70 leading-relaxed">
-                    Kami langsung memulai tahapan produksi, uji mutu QC, dan pengemasan. Produk kemudian akan dimuat ke kontainer beserta pengecekan dokumen ekspor secara lengkap.
+                    {t('how_to_buy.steps.s4_desc')}
                   </p>
                 </div>
               </Step>
@@ -92,7 +95,7 @@ export default function HowToBuy() {
                 animate={{ opacity: 1, y: 0 }} 
                 className="mt-6 text-center text-sm font-medium text-green-700 bg-green-50 p-4 rounded-xl border border-green-200"
               >
-                Anda sudah memahami semua tahapan! Siap untuk mulai berbisnis? Hubungi kami sekarang.
+                {t('how_to_buy.completed')}
               </motion.div>
             )}
           </motion.div>
@@ -102,3 +105,4 @@ export default function HowToBuy() {
     </section>
   );
 }
+

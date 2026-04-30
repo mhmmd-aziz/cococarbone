@@ -20,7 +20,7 @@ export default function AppRoutes() {
       {/* Rute Detail Produk */}
       <Route path="/products/charcoal" element={<Charcoal />} />
       <Route path="/products/coconut" element={<Coconut />} />
-      <Route path="/products/candlenut" element={<Candlenut />} />
+      {/* <Route path="/products/candlenut" element={<Candlenut />} /> */}
     </Routes>
   );
 }

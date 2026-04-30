@@ -8,8 +8,8 @@ import BlurText from '../components/ReactBits/BlurText';
 import { ShinyText } from '../components/ReactBits/ShinyText';
 import LineWaves from '../components/ReactBits/LineWaves';
 
-import arangNoBg from '../assets/arangNoBg.png';
-import kelapaNoBg from '../assets/kelapaNoBg.png';
+import arangNoBg from '../assets/arangheronobg.png';
+import kelapaNoBg from '../assets/kelapano_bg.png';
 // import kemiriNoBg from '../assets/kemiriNoBg.png';
 
 const heroImages = [
@@ -22,7 +22,7 @@ export default function Hero() {
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Optional: Auto-slide every 5 seconds.
+  // Auto-slide every 5 seconds.
   useEffect(() => {
     const timer = setInterval(() => {
       handleNext();
@@ -41,7 +41,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen bg-white flex items-center overflow-hidden">
       
-      {/* Background Pattern (Minimalist Grid & Ambient Natural Glow) */}
+      {/* Background Pattern */}
       <div 
         className="absolute inset-0 z-0 pointer-events-none opacity-[0.04]"
         style={{
@@ -63,7 +63,8 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-xl md:text-2xl font-medium tracking-wide mb-2 text-[#14452F]/80"
           >
-            <ShinyText text="Welcome to" speed={3} />
+            {/* Sinkron ke JSON: hero.title */}
+            <ShinyText text={t('hero.title')} speed={3} />
           </motion.h2>
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
@@ -86,7 +87,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="text-[#14452F]/80 text-sm md:text-base leading-relaxed max-w-md mb-10"
           >
-            Discover the highest quality coconut charcoal briquettes directly from Indonesia. Sustainable, long-lasting, and meticulously crafted for your needs.
+            {/* Sinkron ke JSON: hero.subtitle */}
+            {t('hero.subtitle')}
           </motion.p>
           
           <motion.div 
@@ -96,16 +98,18 @@ export default function Hero() {
             className="flex items-center gap-4"
           >
             <Link 
-              to="/products"
+              to="/about"
               className="bg-[#14452F] text-white px-8 py-3.5 rounded-full font-semibold hover:bg-[#14452F]/90 transition-all shadow-lg"
             >
-              Learn More
+              {/* Sinkron ke JSON: about_preview.btn */}
+              {t('about_preview.btn')}
             </Link>
             <Link 
               to="/contact"
               className="border border-[#14452F] text-[#14452F] px-8 py-3.5 rounded-full font-semibold hover:bg-[#14452F] hover:text-white transition-all"
             >
-              Contact Us
+              {/* Sinkron ke JSON: nav.contact */}
+              {t('nav.contact')}
             </Link>
           </motion.div>
         </div>
@@ -113,7 +117,6 @@ export default function Hero() {
         {/* Right Image/Product Area */}
         <div className="w-full md:w-1/2 relative h-[380px] md:h-[450px] lg:h-[550px] flex items-center justify-center mt-8 md:mt-0 z-10 pointer-events-none">
           
-          {/* Main Floating Product Carousel */}
           <motion.div 
             animate={{ y: [-15, 15] }}
             transition={{ 
@@ -161,11 +164,6 @@ export default function Hero() {
               <ChevronRight size={20} />
             </button>
           </div>
-
-          {/* Floating Element 1 - Top Left */}
-
-
-
         </div>
       </div>
     </section>

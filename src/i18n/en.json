@@ -3,17 +3,19 @@
     "home": "Home",
     "about": "About",
     "products": "Products",
-    "contact": "Contact"
+    "contact": "Contact",
+    "shopNow": "Shop Now"
   },
   "hero": {
-    "title": "Premium Coconut Export",
-    "subtitle": "Elevates agricultural operations to new heights with our high-quality coconut and charcoal products.",
+    "welcome": "Welcome to",
+    "title": "Premium Carbon Charcoal & Coconut Export",
+    "subtitle": "Indonesia's trusted exporter of premium coconut shell carbon charcoal and mature coconut, supplying B2B partners across the globe.",
     "cta": "Contact via WhatsApp"
   },
   "about_preview": {
     "badge": "About Cococarbone",
-    "title": "Your Trusted Partner in Global Coconut & Charcoal Supply",
-    "desc": "Based in Indonesia, we specialize in exporting premium coconut and charcoal products to the global market. We maintain strict quality control from our plantations directly to your port, ensuring you get the best nature has to offer.",
+    "title": "Your Trusted Partner in Carbon Charcoal & Mature Coconut Supply",
+    "desc": "Based in Indonesia, we specialize in exporting premium coconut shell carbon charcoal and mature coconuts to the global market. We maintain strict quality control from our plantations directly to your port, ensuring you get the best nature has to offer.",
     "btn": "Learn More About Us",
     "stats": {
       "cap": "Volume Capacity",
@@ -36,23 +38,18 @@
       "c4_desc": "Sustainable sourcing and environmentally responsible processing."
     }
   },
-
   "products_preview": {
     "badge": "Our Products",
     "title": "Explore Our Premium Commodities",
     "subtitle": "High-quality natural resources processed to meet global standards.",
     "items": {
       "charcoal": {
-        "title": "Coconut Shell Charcoal",
-        "desc": "Premium briquettes and natural charcoal for shisha and BBQ, offering high heat and low ash."
+        "title": "Coconut Shell Carbon Charcoal",
+        "desc": "Premium carbon charcoal made from 100% natural coconut shells for shisha and BBQ, offering high heat and ultra-low ash."
       },
       "coconut": {
-        "title": "Fresh & Semi-Husked Coconut",
-        "desc": "Carefully selected mature coconuts, rich in meat and water, perfect for industrial processing."
-      },
-      "candlenut": {
-        "title": "Premium Candlenut",
-        "desc": "High-grade whole candlenuts, essential for culinary uses and oil extraction."
+        "title": "Mature Coconut",
+        "desc": "Export-grade mature coconuts with thick meat and high water content-ideal for industrial processing, coconut oil, and desiccated coconut production."
       }
     },
     "btn": "View Details"
@@ -61,13 +58,12 @@
     "company_desc": "Exporting Indonesia's finest agricultural products to the world.",
     "quick_links": "Quick Links",
     "contact": "Contact Us",
-    "address": "Indonesia",
+    "address": "Jalan Bajak 2 H, Komplek ITM No. A2, Medan - North Sumatera",
     "rights": "All rights reserved."
   },
-
   "charcoal_page": {
-    "title": "Coconut Shell Charcoal Briquettes",
-    "desc": "Premium grade briquettes specially crafted for Shisha/Hookah and BBQ. Manufactured using 100% natural coconut shells from Indonesia, ensuring long burning time, high heat, zero chemical additives, and very low ash.",
+    "title": "Coconut Shell Carbon Charcoal",
+    "desc": "Premium grade carbon charcoal specially crafted for Shisha/Hookah and BBQ. Produced using 100% natural coconut shells from Indonesia, delivering exceptional long burn time, intense & stable heat, zero chemical additives, and ultra-low ash residue.",
     "specs_title": "Technical Specifications",
     "pack_title": "Packaging & Loading Capacity",
     "specs": {
@@ -88,36 +84,40 @@
     }
   },
   "coconut_page": {
-    "title": "Fresh Semi-Husked Coconut",
-    "desc": "Carefully selected mature coconuts originating from the best plantations in Indonesia. Ideal for industrial processing, coconut milk extraction, desiccated coconut, and daily consumption.",
+    "title": "Mature Coconut",
+    "desc": "Export-grade mature coconuts sourced from the finest plantations across Indonesia. Characterized by thick white coconut meat and abundant water content, our mature coconuts are perfectly suited for industrial processing-including coconut oil extraction, desiccated coconut, coconut milk, and other coconut-based derivatives.",
     "specs_title": "Product Specifications",
     "pack_title": "Packaging & Delivery",
     "specs": {
-      "type": "Semi-Husked Mature Coconut",
-      "weight": "800g - 1200g+ per piece",
-      "color": "Light Brown / Brown",
-      "grade": "A / B / C Available",
+      "type": "Mature Coconut (Kelapa Tua)",
+      "weight": "800g - 1500g+ per piece",
+      "color": "Brown / Dark Brown",
+      "grade": "A / B Available",
       "shelf_life": "60 Days (in proper storage)"
     },
     "packaging": {
       "bag": "Mesh Bag / Gunny Bag",
       "qty": "25 - 30 pieces per bag",
-      "weight_bag": "Approx. 25kg - 30kg per bag",
+      "weight_bag": "Approx. 25kg - 35kg per bag",
       "load_40ft": "Approx. 25 Metric Tons (900 - 1000 bags)"
     }
-  }, 
-
+  },
   "about_page": {
-    "title": "About CV. Indo Nusantara",
+    "title": "About CV. Gemilang Indo Nusantara",
     "subtitle": "Connecting Indonesia's rich natural resources with the global market.",
     "story_title": "Our Story",
-    "story_desc": "Cococarbone operates under CV. Indo Nusantara, a legally registered export company in Indonesia. We started with a vision to empower local farmers and deliver the highest quality agricultural commodities to international buyers. With strict quality control and a deep understanding of global logistics, we ensure every shipment meets your expectations.",
+    "story_desc": "Cococarbone operates under CV. Gemilang Indo Nusantara, a legally registered export company in Indonesia. We started with a vision to empower local farmers and deliver the highest quality agricultural commodities to international buyers. With strict quality control and a deep understanding of global logistics, we ensure every shipment meets your expectations.",
     "vision_title": "Our Vision",
     "vision_desc": "To be the most trusted and reliable supplier of Indonesian agricultural products worldwide, promoting sustainable and fair trade.",
     "mission_title": "Our Mission",
     "mission_desc": "Delivering premium quality continuously, maintaining transparent B2B relationships, and ensuring on-time global delivery.",
     "values_title": "Our Core Values",
     "values_subtitle": "The principles that guide our every move in the global market.",
+    "legal_title": "Official Legal Registration",
+    "legal_desc": "Cococarbone operates legally under CV. Gemilang Indo Nusantara, officially registered with the Ministry of Law and Human Rights of the Republic of Indonesia. This ensures our global partners of our compliance, transparency, and business legitimacy.",
+    "legal_doc": "Registration No: AHU-0027112-AH.01.14 ",
+    "facility_title": "Our Facilities & Production",
+    "facility_desc": "Take a glimpse into our production lines and warehouses where we process, sort, and package our premium commodities to ensure the highest quality before shipping to your port.",
     "values": {
       "quality": {
         "title": "Uncompromised Quality",
@@ -137,23 +137,28 @@
     "title": "Our Catalog",
     "subtitle": "Browse our selection of premium export-ready commodities."
   },
-    "contact_page": {
-      "title": "Get In Touch",
-      "subtitle": "Ready to order or need a custom quotation? We are here to help.",
-      "office": "Head Office",
-      "whatsapp": "Chat on WhatsApp",
-      "email": "Email Us",
-      "newsletter_title": "Our Newsletters",
-      "newsletter_desc": "Stay updated with our latest products, market insights, and export news.",
-      "form": {
-        "name": "Name",
-        "email": "Email",
-        "phone": "Phone",
-        "message": "Message",
-        "submit": "Submit"
-      }
-    }, 
-
+  "contact_page": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to order or need a custom quotation? We are here to help.",
+    "office": "Head Office",
+    "whatsapp": "Chat on WhatsApp",
+    "email": "Email Us",
+    "newsletter_title": "Our Newsletters",
+    "newsletter_desc": "Stay updated with our latest products, market insights, and export news.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "submit": "Submit"
+    },
+    "subscribe": {
+      "btn": "Subscribe Now",
+      "loading": "Subscribing...",
+      "success": "Subscribed! 🎉",
+      "already": "Already Subscribed"
+    }
+  },
   "candlenut_page": {
     "title": "Premium Whole Candlenut",
     "desc": "High-quality candlenuts sourced from the best plantations in Eastern Indonesia. Our candlenuts are carefully processed to maintain their natural oil content and creamy white color, perfect for industrial oil extraction and culinary excellence.",
@@ -171,6 +176,25 @@
       "weight": "25kg - 50kg per bag",
       "custom": "Bulk packaging available on request",
       "load_20ft": "Approx. 15-17 Metric Tons"
+    }
+  },
+  "how_to_buy": {
+    "title": "How to Order",
+    "title_brand": "CocoCarbone",
+    "subtitle": "We've designed our premium coconut carbon charcoal ordering process to be transparent, secure, and straightforward for B2B partners worldwide. Follow our structured steps to ensure your order arrives on time.",
+    "back": "Back",
+    "next": "Next",
+    "finish": "Finish",
+    "completed": "You've reviewed all steps! Ready to start doing business? Contact us now.",
+    "steps": {
+      "s1_title": "1. Submit an Inquiry",
+      "s1_desc": "Contact our team and provide the product specifications you need (Grade, size, packaging type), along with estimated order volume and destination port.",
+      "s2_title": "2. Consultation & Sample",
+      "s2_desc": "Our expert team will discuss pricing, production capacity, and private label options if needed. We are also ready to send product samples so you can test quality firsthand.",
+      "s3_title": "3. Sales Contract & Down Payment",
+      "s3_desc": "Once an agreement is reached, we will issue a Proforma Invoice / Sales Contract. You may make a Down Payment (DP) or open an L/C according to the payment terms.",
+      "s4_title": "4. Production & Shipment",
+      "s4_desc": "We immediately begin production, QC quality testing, and packaging. The products are then loaded into containers along with complete export documentation."
     }
   }
 }

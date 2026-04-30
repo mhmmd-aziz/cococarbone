@@ -1,18 +1,18 @@
 import React from 'react';
 import ImageTrail from '../components/ReactBits/ImageTrail';
 
-import img1 from '../assets/product-charcoal.png';
-import img2 from '../assets/product-coconut.png';
-import img3 from '../assets/product-candlenut.png';
-import img4 from '../assets/hero.png';
-import img5 from '../assets/BgKelapa.jpg';
-import img6 from '../assets/BgDaun.jpg';
-import img7 from '../assets/arangNoBg.png';
-import img8 from '../assets/kelapaNoBg.png';
+import img1 from '../assets/arang2.png';
+import img2 from '../assets/arang3.png';
+// import img3 from '../assets/product-candlenut.png';
+import img4 from '../assets/arang5.png';
+import img5 from '../assets/kelapa1.png';
+import img6 from '../assets/kelapa2.png';
+import img7 from '../assets/arang1.png';
+import img8 from '../assets/kelapa3.png';
 
 export default function ImageGallery() {
   // Array of imported images for the trail effect
-  const trailImages = [img1, img2, img3, img4, img5, img6, img7, img8, img1, img2, img3];
+  const trailImages = [img1, img2,  img4, img5, img6, img7, img8, img1, img2];
 
   return (
     <section className="relative w-full h-[600px] bg-[#f8fcf9] overflow-hidden flex items-center justify-center border-y border-[#14452F]/5 mt-10">
@@ -22,7 +22,7 @@ export default function ImageGallery() {
         CocoCarbone
       </h2>
       <div className="absolute inset-x-0 bottom-10 z-0 flex justify-center pointer-events-none">
-        <p className="text-[#14452F]/40 font-semibold tracking-widest uppercase text-sm">Hover/Move cursor above to reveal</p>
+        <p className="text-[#14452F]/40 font-semibold tracking-widest uppercase text-sm"></p>
       </div>
 
       {/* The ImageTrail overlay that interacts with the mouse */}
