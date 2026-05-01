@@ -5,7 +5,7 @@ import { ChevronRight } from 'lucide-react'; // Tambah ChevronRight untuk varias
 
 // Import semua gambar produk dari folder assets
 import imgCharcoal from '../assets/arang3.png';
-import imgCoconut from '../assets/kelapa2.png';
+import imgCoconut from '../assets/kelapaori1.png';
 
 export default function ProductPreview() {
   const { t } = useTranslation();
