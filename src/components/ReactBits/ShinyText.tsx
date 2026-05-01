@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 export function ShinyText({ text, disabled = false, speed = 3, className = '' }: { text: string, disabled?: boolean, speed?: number, className?: string }) {
   const animationDuration = `${speed}s`;
 

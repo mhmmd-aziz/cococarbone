@@ -1,13 +1,9 @@
 import Hero from '../sections/Hero';
 import AboutPreview from '../sections/AboutPreview';
-import WhyUs from '../sections/WhyUs';
 import ProductPreview from '../sections/ProductPreview';
 import ImageGallery from '../sections/ImageGallery';
 import HowToBuy from '../sections/HowToBuy';
 
-import { Leaf, Award, ShieldCheck, Globe2, Flame, CheckCircle2 } from 'lucide-react';
-import LogoLoop from '../components/ReactBits/LogoLoop';
-import CurvedLoop from '../components/ReactBits/CurvedLoop';
 import ScrollVelocity from '../components/ReactBits/ScrollVelocity';
 
 
