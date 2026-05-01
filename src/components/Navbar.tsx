@@ -38,15 +38,15 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 py-4 bg-white/80 backdrop-blur-sm transition-all duration-300">
+    <nav className="fixed top-0 left-0 right-0 z-50 py-2 bg-white/80 backdrop-blur-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-12">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 flex-shrink-0 z-50">
             <img
               src={logoCococarbone}
               alt="Cococarbone Logo"
-              className="h-10 w-auto object-contain mix-blend-multiply"
+              className="h-8 w-auto object-contain mix-blend-multiply"
             />
           </Link>
 
@@ -55,14 +55,14 @@ export default function Navbar() {
             <div className="relative"> 
               <Dock 
                 items={dockItems}
-                panelHeight={58}
-                baseItemSize={42}
-                magnification={60}
+                panelHeight={48}
+                baseItemSize={36}
+                magnification={50}
                 className="!static !relative !transform-none !bottom-auto !left-auto !translate-x-0"
                 actionButton={
                   <Link
                     to="/products"
-                    className="flex items-center px-5 h-[42px] border-2 border-[#14452F] text-[#14452F] text-[14px] font-bold rounded-[10px] hover:bg-[#14452F] hover:text-white transition-all duration-300 whitespace-nowrap"
+                    className="flex items-center px-4 h-[36px] border-2 border-[#14452F] text-[#14452F] text-[13px] font-bold rounded-[10px] hover:bg-[#14452F] hover:text-white transition-all duration-300 whitespace-nowrap"
                   >
                     {t('nav.products')}
                   </Link>

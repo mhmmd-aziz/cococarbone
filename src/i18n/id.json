@@ -49,8 +49,8 @@
         "desc": "Arang carbon premium berbahan 100% batok kelapa alami untuk shisha dan BBQ, menghasilkan panas tinggi dan abu yang sangat rendah."
       },
       "coconut": {
-        "title": "Kelapa Tua",
-        "desc": "Kelapa tua berkualitas ekspor dengan daging tebal dan kandungan air tinggi-ideal untuk industri pengolahan minyak kelapa, kelapa parut kering, dan santan."
+        "title": "Kelapa Tua Semi Husked",
+        "desc": "Kelapa tua semi husked berkualitas ekspor dengan sabut bersih terpotong rapi, daging tebal, dan kandungan air segar — ideal untuk industri pengolahan minyak kelapa, kelapa parut kering, dan santan."
       }
     },
     "btn": "Lihat Detail"
@@ -73,37 +73,39 @@
       "ash": "Maks 2.5%",
       "carbon": "Min 75% - 80%",
       "moisture": "Maks 5%",
-      "volatile": "Maks 15%",
-      "calorie": "Min 7200 Kcal/kg",
-      "burning": "2 - 2.5 Jam",
-      "shape": "Kubus (22mm, 25mm, 26mm), Heksagonal"
+      "volatile": "12 - 15%",
+      "calorie": "75 - 90%",
+      "burning": "3 - 4 Jam",
+      "shape": "Bongkahan, Kubus (22mm, 25mm, 26mm), Heksagonal"
     },
     "packaging": {
-      "inner": "Kotak Dalam dengan Plastik (1kg / 2kg)",
-      "master": "Karton Master (10kg / 20kg)",
-      "custom": "Tersedia Merek OEM / Kustom",
+      "inner": "Karung (40 - 50 Kg)",
+      "master": "Tersedia Merek OEM / Kustom",
+      "custom": "Kotak Dalam dengan Plastik (1kg / 2kg)",
       "load_20ft": "Sekitar 18 Metrik Ton",
-      "load_40ft": "Sekitar 25-26 Metrik Ton"
+      "load_40ft": "Sekitar 35 - 38 Metrik Ton"
     }
   },
   "coconut_page": {
-    "title": "Kelapa Tua",
-    "desc": "Kelapa tua berkualitas ekspor yang bersumber dari perkebunan terbaik di seluruh Indonesia. Dicirikan dengan daging kelapa yang tebal dan putih serta kandungan air yang melimpah, kelapa tua kami sangat cocok untuk pemrosesan industri-termasuk ekstraksi minyak kelapa, kelapa parut kering, santan, dan turunan produk kelapa lainnya.",
-    "specs_title": "Spesifikasi Produk",
-    "pack_title": "Pengemasan & Pengiriman",
+    "title": "Kelapa Tua Semi Husked",
+    "desc": "Kelapa tua semi husked berkualitas ekspor yang bersumber dari perkebunan terbaik di seluruh Indonesia. Dicirikan dengan sabut yang bersih dan terpotong rapi, daging kelapa yang tebal dan putih, serta kandungan air yang melimpah dan segar. Kelapa semi husked kami sangat cocok untuk pemrosesan industri — termasuk ekstraksi minyak kelapa, kelapa parut kering, santan, dan turunan produk kelapa lainnya.",
+    "specs_title": "Spesifikasi Teknis",
+    "pack_title": "Pengemasan & Logistik",
     "inquire_btn": "Kirim Inkuiri",
     "specs": {
-      "type": "Kelapa Tua",
-      "weight": "800g - 1500g+ per butir",
-      "color": "Coklat / Coklat Tua",
-      "grade": "Tersedia Grade A / B",
-      "shelf_life": "60 Hari (penyimpanan yang tepat)"
+      "appearance": "Bersih, sabut terpotong rapi, tanpa lumpur/kotoran, tanpa retakan",
+      "diameter": "11 cm – 14 cm (Ukuran Ekspor Standar)",
+      "weight": "500g – 1.000g (Dapat Dipilih Berdasarkan Grade)",
+      "maturity": "9 - 10 Bulan (Tua & Matang)",
+      "water_content": "Segar & Berkocak (Terdengar saat diguncang)",
+      "meat_thickness": "10 mm – 15 mm (Kandungan minyak tinggi)",
+      "color": "Coklat Muda Alami / Coklat Keemasan"
     },
     "packaging": {
-      "bag": "Karung Jaring / Karung Goni",
-      "qty": "25 - 30 butir per karung",
-      "weight_bag": "Sekitar 25kg - 35kg per karung",
-      "load_40ft": "Sekitar 25 Metrik Ton (900 - 1000 karung)"
+      "bag": "Karung Jaring PP (Polypropylene) Berkualitas Tinggi",
+      "qty": "20 – 25 butir per karung (sekitar 22kg – 25kg per karung)",
+      "load_20ft": "Sekitar 900 – 1.000 karung",
+      "load_40ft": "Sekitar 2.000 – 2.100 karung (Kontainer 40ft HC)"
     }
   },
 
@@ -155,7 +157,8 @@
         "email": "Email",
         "phone": "Telepon",
         "message": "Pesan",
-        "submit": "Kirim"
+        "submit": "Kirim",
+        "whatsapp_info": "Pesan Anda akan dikirim langsung melalui WhatsApp"
       },
       "subscribe": {
         "btn": "Berlangganan",

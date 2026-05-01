@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 import CTAWhatsapp from '../components/CTAWhatsapp';
 
 // 1. Import gambar kelapa dan infografis spesifikasi
-import imgCoconut from '../assets/kelapa2.png';
-import imgCoconut2 from '../assets/kelapa1.png';
-import imgCoconut3 from '../assets/kelapa3.png';
+import imgCoconut from '../assets/kelapaori1.png';
+import imgCoconut2 from '../assets/kelapaori3.png';
+import imgCoconut3 from '../assets/kelapa1.png';
 import imgSpekKelapa from '../assets/spek_kelapa.png'; // <-- Gambar Spek Kelapa
 
 export default function Coconut() {
@@ -57,7 +57,7 @@ export default function Coconut() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 1.05 }}
                     transition={{ duration: 0.3 }}
-                    alt="Kelapa Tua - Mature Coconut"
+                    alt="Semi Husked Coconut"
                     className="w-full h-full object-cover shadow-sm"
                   />
                 </AnimatePresence>
@@ -128,11 +128,13 @@ export default function Coconut() {
 
               <div className="border-t-2 border-[#14452F]">
                 {[
-                  { label: "Product Type", value: t('coconut_page.specs.type') },
-                  { label: "Weight per piece", value: t('coconut_page.specs.weight') },
-                  { label: "Shell Color", value: t('coconut_page.specs.color') },
-                  { label: "Available Grade", value: t('coconut_page.specs.grade') },
-                  { label: "Est. Shelf Life", value: t('coconut_page.specs.shelf_life') },
+                  { label: "Appearance", value: t('coconut_page.specs.appearance') },
+                  { label: "Diameter", value: t('coconut_page.specs.diameter') },
+                  { label: "Weight per Piece", value: t('coconut_page.specs.weight') },
+                  { label: "Maturity", value: t('coconut_page.specs.maturity') },
+                  { label: "Water Content", value: t('coconut_page.specs.water_content') },
+                  { label: "Meat Thickness", value: t('coconut_page.specs.meat_thickness') },
+                  { label: "Color", value: t('coconut_page.specs.color') },
                 ].map((spec, i) => (
                   <div key={i} className="flex flex-col sm:flex-row sm:justify-between py-4 border-b border-gray-100 group hover:bg-gray-50 transition-colors px-2">
                     <span className="font-medium text-gray-500 mb-1 sm:mb-0">{spec.label}</span>
@@ -157,7 +159,7 @@ export default function Coconut() {
                 {[
                   t('coconut_page.packaging.bag'),
                   t('coconut_page.packaging.qty'),
-                  t('coconut_page.packaging.weight_bag'),
+                  `20ft Container: ${t('coconut_page.packaging.load_20ft')}`,
                   `40ft HC: ${t('coconut_page.packaging.load_40ft')}`
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -171,7 +173,7 @@ export default function Coconut() {
                 <p className="text-sm font-medium text-gray-500 mb-5">
                   Need CIF pricing or specific packaging for mature coconut? Send us a message!
                 </p>
-                <CTAWhatsapp text={t('coconut_page.inquire_btn')} productName="Mature Coconut (Kelapa Tua)" className="w-full !rounded-none py-4 text-lg" />
+                <CTAWhatsapp text={t('coconut_page.inquire_btn')} productName="Semi Husked Coconut" className="w-full !rounded-none py-4 text-lg" />
               </div>
             </div>
 

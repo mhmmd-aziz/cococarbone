@@ -1,174 +1,149 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Typewriter } from '../components/ReactBits/Typewriter';
-import BlurText from '../components/ReactBits/BlurText';
-import { ShinyText } from '../components/ReactBits/ShinyText';
-import LineWaves from '../components/ReactBits/LineWaves';
 
-import arangNoBg from '../assets/arangheronobg.png';
-import kelapaNoBg from '../assets/kelapano_bg.png';
-// import kemiriNoBg from '../assets/kemiriNoBg.png';
+// Hero background images
+import pt1 from '../assets/pt1.png';
+import pt2 from '../assets/pt2.png';
+import aranghero1 from '../assets/aranghero1.png';
+import aranghero2 from '../assets/aranghero2.png';
+import kelapahero1 from '../assets/kelapahero1.png';
+import kelapahero2 from '../assets/kelapahero2.png';
 
-const heroImages = [
-  { id: 1, src: arangNoBg, alt: 'Premium Coconut Charcoal' },
-  { id: 2, src: kelapaNoBg, alt: 'Fresh Indonesian Coconuts' },
-  // { id: 3, src: kemiriNoBg, alt: 'High Quality Candlenuts' }
+const heroSlides = [
+  { id: 1, src: pt1, alt: 'Cococarbone Facility 1' },
+  { id: 2, src: aranghero1, alt: 'Premium Charcoal Production' },
+  { id: 3, src: kelapahero1, alt: 'Fresh Coconut Harvest' },
+  { id: 4, src: pt2, alt: 'Cococarbone Facility 2' },
+  { id: 5, src: aranghero2, alt: 'Charcoal Quality Control' },
+  { id: 6, src: kelapahero2, alt: 'Coconut Processing' },
 ];
 
 export default function Hero() {
   const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Auto-slide every 5 seconds.
+  const handleNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev === heroSlides.length - 1 ? 0 : prev + 1));
+  }, []);
+
+  // Auto-slide every 5 seconds
   useEffect(() => {
-    const timer = setInterval(() => {
-      handleNext();
-    }, 5000);
+    const timer = setInterval(handleNext, 5000);
     return () => clearInterval(timer);
-  }, [currentIndex]);
-
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? heroImages.length - 1 : prev - 1));
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev === heroImages.length - 1 ? 0 : prev + 1));
-  };
+  }, [handleNext]);
 
   return (
-    <section className="relative min-h-screen bg-white flex items-center overflow-hidden">
+    <section id="hero-section" className="relative w-full h-screen min-h-[600px] overflow-hidden">
       
-      {/* Background Pattern */}
+      {/* Background Image Slideshow */}
+      <AnimatePresence mode="popLayout">
+        <motion.div
+          key={currentIndex}
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ opacity: { duration: 1.2, ease: 'easeInOut' }, scale: { duration: 6, ease: 'easeOut' } }}
+          className="absolute inset-0 z-0"
+        >
+          <img
+            src={heroSlides[currentIndex].src}
+            alt={heroSlides[currentIndex].alt}
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Dark Gradient Overlay */}
       <div 
-        className="absolute inset-0 z-0 pointer-events-none opacity-[0.04]"
+        className="absolute inset-0 z-10"
         style={{
-          backgroundImage: `radial-gradient(#14452F 2px, transparent 2px)`,
-          backgroundSize: '32px 32px'
+          background: `linear-gradient(
+            135deg,
+            rgba(10, 25, 16, 0.88) 0%,
+            rgba(10, 25, 16, 0.72) 35%,
+            rgba(10, 25, 16, 0.45) 65%,
+            rgba(10, 25, 16, 0.30) 100%
+          )`
         }}
       />
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] md:w-[800px] md:h-[800px] bg-emerald-400/5 rounded-full blur-[100px] md:blur-[150px] -translate-y-1/2 translate-x-1/3 pointer-events-none mix-blend-multiply" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-[#14452F]/5 rounded-full blur-[100px] md:blur-[150px] translate-y-1/3 -translate-x-1/4 pointer-events-none mix-blend-multiply" />
-      
-      {/* Container */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full flex flex-col md:flex-row items-center justify-between pt-20">
-        
-        {/* Left Content Area */}
-        <div className="w-full md:w-1/2 z-10 text-[#14452F] flex flex-col pt-10 md:pt-0 md:-mt-16 lg:-mt-24 pointer-events-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-xl md:text-2xl font-medium tracking-wide mb-2 text-[#14452F]/80"
-          >
-            {/* Sinkron ke JSON: hero.title */}
-            <ShinyText text={t('hero.title')} speed={3} />
-          </motion.h2>
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-            className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold leading-[1.05] mb-6 tracking-tight overflow-hidden"
-          >
-            <BlurText 
-              text="Cococarbone"
-              delay={50}
-              animateBy="letters"
-              direction="bottom"
-              className="text-[#14452F]"
-            />
-          </motion.h1>
+
+      {/* Bottom gradient for seamless transition to next section */}
+      <div 
+        className="absolute bottom-0 left-0 right-0 h-32 z-10"
+        style={{
+          background: 'linear-gradient(to top, rgba(248,250,248,1) 0%, transparent 100%)'
+        }}
+      />
+
+      {/* Content */}
+      <div className="relative z-20 h-full max-w-7xl mx-auto px-6 lg:px-8 flex items-center">
+        <div className="w-full md:w-3/5 lg:w-1/2">
           
-          <motion.p 
+
+          {/* Main Heading */}
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-[#14452F]/80 text-sm md:text-base leading-relaxed max-w-md mb-10"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-4xl md:text-5xl lg:text-6xl xl:text-[4.5rem] font-bold leading-[1.08] mb-6 tracking-tight bg-gradient-to-br from-white via-white to-[#8BC9A4] bg-clip-text text-transparent drop-shadow-sm"
           >
-            {/* Sinkron ke JSON: hero.subtitle */}
+            {t('hero.title')}
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-base md:text-lg leading-relaxed max-w-lg mb-10 font-light"
+            style={{ color: 'rgba(255,255,255,0.85)' }}
+          >
             {t('hero.subtitle')}
           </motion.p>
-          
-          <motion.div 
+
+          {/* CTA Buttons */}
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="flex items-center gap-4"
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="flex flex-wrap items-center gap-4"
           >
-            <Link 
+            <Link
               to="/about"
-              className="bg-[#14452F] text-white px-8 py-3.5 rounded-full font-semibold hover:bg-[#14452F]/90 transition-all shadow-lg"
+              className="group relative inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-base font-semibold text-white overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-emerald-900/30"
+              style={{ backgroundColor: '#1A5A3C' }}
+              onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#20724C'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#1A5A3C'; }}
             >
-              {/* Sinkron ke JSON: about_preview.btn */}
               {t('about_preview.btn')}
             </Link>
-            <Link 
+            <Link
               to="/contact"
-              className="border border-[#14452F] text-[#14452F] px-8 py-3.5 rounded-full font-semibold hover:bg-[#14452F] hover:text-white transition-all"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-base font-semibold transition-all duration-300"
+              style={{
+                color: 'white',
+                border: '1.5px solid rgba(255,255,255,0.5)',
+                backdropFilter: 'blur(8px)',
+                backgroundColor: 'rgba(255,255,255,0.08)'
+              }}
+              onMouseEnter={(e) => { 
+                e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.2)';
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.8)';
+              }}
+              onMouseLeave={(e) => { 
+                e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)';
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.5)';
+              }}
             >
-              {/* Sinkron ke JSON: nav.contact */}
               {t('nav.contact')}
             </Link>
           </motion.div>
         </div>
-
-        {/* Right Image/Product Area */}
-        <div className="w-full md:w-1/2 relative h-[380px] md:h-[450px] lg:h-[550px] flex items-center justify-center mt-8 md:mt-0 z-10 pointer-events-none">
-          
-          <motion.div 
-            animate={{ y: [-15, 15] }}
-            transition={{ 
-              y: { duration: 4, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }
-            }}
-            className="relative z-20 w-[85%] md:w-[115%] lg:w-[120%] -ml-0 lg:-ml-10 flex items-center justify-center h-full"
-          >
-            <AnimatePresence mode="wait">
-              <motion.img 
-                key={currentIndex}
-                initial={{ opacity: 0, scale: 0.8, x: 20 }}
-                animate={{ opacity: 1, scale: 1, x: 0 }}
-                exit={{ opacity: 0, scale: 0.8, x: -20 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                src={heroImages[currentIndex].src} 
-                alt={heroImages[currentIndex].alt}
-                className="w-full max-h-[90%] object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.4)]"
-              />
-            </AnimatePresence>
-          </motion.div>
-
-          {/* Carousel Controls */}
-          <div className="absolute bottom-2 md:bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4 z-40 pointer-events-auto">
-            <button 
-              onClick={handlePrev} 
-              aria-label="Previous slide"
-              className="p-2 bg-white/80 backdrop-blur-md border border-[#14452F]/10 rounded-full shadow-lg hover:bg-[#14452F] hover:text-white transition-all text-[#14452F]"
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <div className="flex gap-2.5 items-center">
-              {heroImages.map((_, i) => (
-                <button
-                  key={i}
-                  aria-label={`Go to slide ${i + 1}`}
-                  onClick={() => setCurrentIndex(i)}
-                  className={`rounded-full transition-all duration-300 ${
-                    i === currentIndex ? 'w-8 h-2.5 bg-[#14452F]' : 'w-2.5 h-2.5 bg-[#14452F]/20 hover:bg-[#14452F]/40'
-                  }`}
-                />
-              ))}
-            </div>
-            <button 
-              onClick={handleNext} 
-              aria-label="Next slide"
-             className="p-2 bg-white/80 backdrop-blur-md border border-[#14452F]/10 rounded-full shadow-lg hover:bg-[#14452F] hover:text-white transition-all text-[#14452F]"
-            >
-              <ChevronRight size={20} />
-            </button>
-          </div>
-        </div>
       </div>
+
+
     </section>
   );
 }

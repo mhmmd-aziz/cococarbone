@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { MapPin, Mail, Phone, Send, CheckCircle2, Loader2, BellRing } from 'lucide-react';
+import { MapPin, Mail, Phone, Send, CheckCircle2, BellRing } from 'lucide-react';
 import HeaderContact from '../sections/HeaderContact';
 
 const WA_NUMBER = '6281519646990';
@@ -11,10 +11,6 @@ export default function Contact() {
 
   // --- Form State ---
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
-
-  // --- Subscribe State ---
-  const [subEmail, setSubEmail] = useState('');
-  const [subStatus, setSubStatus] = useState<'idle' | 'loading' | 'success' | 'already'>('idle');
 
   // --- Toast State ---
   const [toast, setToast] = useState<{ show: boolean; msg: string; type: 'success' | 'info' }>({ show: false, msg: '', type: 'success' });
@@ -40,34 +36,6 @@ export default function Contact() {
     );
     window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, '_blank');
     setFormData({ name: '', email: '', phone: '', message: '' });
-  };
-
-  // --- Subscribe Handler ---
-  const handleSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(subEmail)) {
-      showToast('Please enter a valid email address.', 'info');
-      return;
-    }
-
-    const stored: string[] = JSON.parse(localStorage.getItem('coco_subscribers') || '[]');
-    if (stored.includes(subEmail.toLowerCase())) {
-      setSubStatus('already');
-      showToast('This email is already subscribed! ', 'info');
-      setTimeout(() => setSubStatus('idle'), 2000);
-      return;
-    }
-
-    setSubStatus('loading');
-    await new Promise(r => setTimeout(r, 1200)); // simulate async
-
-    stored.push(subEmail.toLowerCase());
-    localStorage.setItem('coco_subscribers', JSON.stringify(stored));
-    setSubStatus('success');
-    showToast('Successfully subscribed! Thank you 🌿', 'success');
-    setSubEmail('');
-    setTimeout(() => setSubStatus('idle'), 3000);
   };
 
   const containerVariants = {
@@ -111,11 +79,10 @@ export default function Contact() {
         viewport={{ once: true }}
         className="max-w-7xl mx-auto px-6 space-y-12 relative z-10 mt-8 md:mt-16"
       >
-        {/* Top Section: Form & Newsletter */}
-        <div className="grid lg:grid-cols-3 gap-8">
-
+        {/* Top Section: Form */}
+        <div className="max-w-4xl mx-auto">
           {/* Contact Form - WhatsApp Submit */}
-          <motion.div variants={itemVariants} className="lg:col-span-2 bg-[#F8FAF8] rounded-[2rem] p-8 md:p-12 border border-[#14452F]/10 shadow-sm">
+          <motion.div variants={itemVariants} className="bg-[#F8FAF8] rounded-[2rem] p-8 md:p-12 border border-[#14452F]/10 shadow-sm">
             <form className="grid grid-cols-1 md:grid-cols-2 gap-6" onSubmit={handleSubmit}>
               <div className="space-y-2">
                 <input
@@ -153,7 +120,7 @@ export default function Contact() {
                   className={`${inputClass} resize-none`}
                 ></textarea>
               </div>
-              <div className="md:col-span-2 pt-2">
+              <div className="md:col-span-2 pt-2 flex flex-col md:flex-row md:items-center gap-4">
                 <button
                   type="submit"
                   className="group flex items-center justify-center gap-3 bg-[#14452F] hover:bg-[#0F3523] text-white font-bold py-4 px-10 rounded-xl transition-all shadow-lg shadow-[#14452F]/20 active:scale-[0.98] w-full md:w-auto"
@@ -161,46 +128,11 @@ export default function Contact() {
                   <span>{t('contact_page.form.submit')}</span>
                   <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                 </button>
-                <p className="text-xs text-[#14452F]/40 mt-3 font-medium">
-                  ✦ Your message will be sent directly via WhatsApp
+                <p className="text-xs text-[#14452F]/40 font-medium">
+                  {t('contact_page.form.whatsapp_info')}
                 </p>
               </div>
             </form>
-          </motion.div>
-
-          {/* Newsletter Box - Subscribe with localStorage */}
-          <motion.div variants={itemVariants} className="bg-[#14452F] rounded-[2rem] p-8 md:p-10 text-white relative overflow-hidden flex flex-col justify-between shadow-2xl">
-            <div className="relative z-10">
-              <h2 className="text-2xl font-bold mb-3 tracking-tight">{t('contact_page.newsletter_title')}</h2>
-              <p className="text-white/70 mb-8 leading-relaxed text-sm">
-                {t('contact_page.newsletter_desc')}
-              </p>
-            </div>
-
-            <form onSubmit={handleSubscribe} className="relative z-10 space-y-4">
-              <input
-                type="email"
-                value={subEmail}
-                onChange={e => setSubEmail(e.target.value)}
-                disabled={subStatus === 'loading' || subStatus === 'success'}
-                placeholder={t('contact_page.form.email')}
-                className="w-full bg-white/10 text-white placeholder:text-white/50 font-medium rounded-xl px-6 py-4 outline-none border border-white/20 focus:border-white transition-colors backdrop-blur-sm disabled:opacity-60"
-              />
-              <button
-                type="submit"
-                disabled={subStatus === 'loading' || subStatus === 'success'}
-                className="w-full bg-white hover:bg-gray-100 text-[#14452F] font-bold py-4 rounded-xl transition-all active:scale-[0.98] shadow-lg flex items-center justify-center gap-2 disabled:opacity-80 disabled:cursor-not-allowed min-h-[56px]"
-              >
-                {subStatus === 'loading' && <><Loader2 size={18} className="animate-spin shrink-0" /> {t('contact_page.subscribe.loading')}</>}
-                {subStatus === 'success' && <><CheckCircle2 size={18} className="text-green-600 shrink-0" /> <span className="text-green-600">{t('contact_page.subscribe.success')}</span></>}
-                {subStatus === 'already' && <><CheckCircle2 size={18} className="text-[#18A19A] shrink-0" /> <span className="text-[#18A19A]">{t('contact_page.subscribe.already')}</span></>}
-                {subStatus === 'idle' && t('contact_page.subscribe.btn')}
-              </button>
-            </form>
-
-            {/* Decorative background elements */}
-            <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-48 h-48 bg-black/30 rounded-full blur-2xl pointer-events-none"></div>
           </motion.div>
         </div>
 

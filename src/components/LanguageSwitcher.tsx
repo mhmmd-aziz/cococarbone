@@ -39,11 +39,13 @@ export default function LanguageSwitcher() {
   return (
     <button
       onClick={toggleLanguage}
-      className="flex items-center justify-center gap-1.5 px-2.5 py-1.5 text-xs font-bold transition-all rounded-full hover:bg-gray-100 active:scale-95 text-[#14452F]"
+      className="flex items-center justify-center w-[36px] h-[36px] transition-all duration-300 rounded-[10px] bg-white border border-[#e5e5e5] active:scale-95 text-[#14452F] cursor-pointer"
+      style={{
+        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+      }}
       title={isEn ? 'Ganti ke Bahasa Indonesia' : 'Switch to English'}
     >
       {isEn ? <FlagGB /> : <FlagID />}
-      <span>{isEn ? 'EN' : 'ID'}</span>
     </button>
   );
 }

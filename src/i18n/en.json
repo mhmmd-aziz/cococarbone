@@ -48,8 +48,8 @@
         "desc": "Premium carbon charcoal made from 100% natural coconut shells for shisha and BBQ, offering high heat and ultra-low ash."
       },
       "coconut": {
-        "title": "Mature Coconut",
-        "desc": "Export-grade mature coconuts with thick meat and high water content-ideal for industrial processing, coconut oil, and desiccated coconut production."
+        "title": "Semi Husked Coconut",
+        "desc": "Export-grade semi husked coconuts with clean, well-trimmed fiber, thick meat, and fresh water content — ideal for coconut oil extraction, desiccated coconut, and coconut milk production."
       }
     },
     "btn": "View Details"
@@ -71,37 +71,39 @@
       "ash": "Max 2.5%",
       "carbon": "Min 75% - 80%",
       "moisture": "Max 5%",
-      "volatile": "Max 15%",
-      "calorie": "Min 7200 Kcal/kg",
-      "burning": "2 - 2.5 Hours",
-      "shape": "Cube (22mm, 25mm, 26mm), Hexagonal"
+      "volatile": "12 - 15%",
+      "calorie": "75 - 90%",
+      "burning": "3 - 4 Hours",
+      "shape": "Chunk, Cube (22mm, 25mm, 26mm), Hexagonal"
     },
     "packaging": {
-      "inner": "Inner Box with Plastic Liner (1kg / 2kg)",
-      "master": "Master Carton Box (10kg / 20kg)",
-      "custom": "OEM / Custom Brand Available",
+      "inner": "Bag (40 - 50 Kg)",
+      "master": "OEM / Custom Brand Available",
+      "custom": "Inner Box with Plastic Liner (1kg / 2kg)",
       "load_20ft": "Approx. 18 Metric Tons",
-      "load_40ft": "Approx. 25-26 Metric Tons"
+      "load_40ft": "Approx. 35 - 38 Metric Tons"
     }
   },
   "coconut_page": {
-    "title": "Mature Coconut",
-    "desc": "Export-grade mature coconuts sourced from the finest plantations across Indonesia. Characterized by thick white coconut meat and abundant water content, our mature coconuts are perfectly suited for industrial processing-including coconut oil extraction, desiccated coconut, coconut milk, and other coconut-based derivatives.",
-    "specs_title": "Product Specifications",
-    "pack_title": "Packaging & Delivery",
+    "title": "Semi Husked Coconut",
+    "desc": "Export-grade semi husked coconuts sourced from the finest plantations across Indonesia. Characterized by clean, well-trimmed fiber, thick white coconut meat, and abundant fresh water content. Our semi husked coconuts are perfectly suited for industrial processing — including coconut oil extraction, desiccated coconut, coconut milk, and other coconut-based derivatives.",
+    "specs_title": "Technical Specifications",
+    "pack_title": "Packaging & Logistics",
     "inquire_btn": "Inquire Now",
     "specs": {
-      "type": "Mature Coconut",
-      "weight": "800g - 1500g+ per piece",
-      "color": "Brown / Dark Brown",
-      "grade": "A / B Available",
-      "shelf_life": "60 Days (in proper storage)"
+      "appearance": "Clean, well-trimmed fiber, no mud/dirt, no cracks",
+      "diameter": "11 cm – 14 cm (Standard Export Size)",
+      "weight": "500g – 1,000g (Selectable by Grade)",
+      "maturity": "9 - 10 Months (Mature & Seasoned)",
+      "water_content": "Fresh & Sloshing (Audible sound when shaken)",
+      "meat_thickness": "10 mm – 15 mm (High oil content)",
+      "color": "Natural Light Brown / Golden Brown"
     },
     "packaging": {
-      "bag": "Mesh Bag / Gunny Bag",
-      "qty": "25 - 30 pieces per bag",
-      "weight_bag": "Approx. 25kg - 35kg per bag",
-      "load_40ft": "Approx. 25 Metric Tons (900 - 1000 bags)"
+      "bag": "High-quality PP (Polypropylene) Mesh Bags",
+      "qty": "20 – 25 pieces per bag (approx. 22kg – 25kg per bag)",
+      "load_20ft": "Approx. 900 – 1,000 bags",
+      "load_40ft": "Approx. 2,000 – 2,100 bags (40ft HC Container)"
     }
   },
   "about_page": {
@@ -152,7 +154,8 @@
       "email": "Email",
       "phone": "Phone",
       "message": "Message",
-      "submit": "Submit"
+      "submit": "Submit",
+      "whatsapp_info": "Your message will be sent directly via WhatsApp"
     },
     "subscribe": {
       "btn": "Subscribe Now",
