@@ -1,11 +1,7 @@
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
 import ProductPreview from '../sections/ProductPreview';
 import TextPressure from '../components/ReactBits/TextPressure';
 
 export default function Products() {
-  const { t } = useTranslation();
-
   return (
     <div className="bg-white pt-28">
       {/* Interactive TextPressure Header */}

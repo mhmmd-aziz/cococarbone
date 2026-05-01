@@ -1,4 +1,3 @@
-import React from 'react';
 import TextPressure from '../components/ReactBits/TextPressure';
 
 export default function HeaderContact() {

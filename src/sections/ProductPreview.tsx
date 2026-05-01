@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ChevronRight } from 'lucide-react'; // Tambah ChevronRight untuk variasi ikon
+import { ChevronRight } from 'lucide-react'; // Tambah ChevronRight untuk variasi ikon
 
 // Import semua gambar produk dari folder assets
 import imgCharcoal from '../assets/arang3.png';

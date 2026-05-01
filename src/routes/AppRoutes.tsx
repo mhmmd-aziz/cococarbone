@@ -3,7 +3,6 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Products from '../pages/Products';
 import Contact from '../pages/Contact';
-import Candlenut from '../pages/Candlenut';
 
 // Import halaman detail produk baru
 import Charcoal from '../pages/Charcoal';

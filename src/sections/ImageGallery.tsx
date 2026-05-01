@@ -1,4 +1,3 @@
-import React from 'react';
 import ImageTrail from '../components/ReactBits/ImageTrail';
 
 import img1 from '../assets/arang2.png';
