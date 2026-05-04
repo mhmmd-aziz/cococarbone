@@ -20,7 +20,23 @@
     "stats": {
       "cap": "Kapasitas Volume",
       "exp": "Siap Ekspor",
-      "qual": "Kualitas Premium"
+      "qual": "Kualitas Premium",
+      "cap_detail": "High Volume Capacity",
+      "cap_desc": "Kami memiliki kapasitas produksi yang besar untuk memenuhi permintaan global secara konsisten. Fasilitas kami mampu menghasilkan ribuan ton arang carbon kelapa berkualitas tinggi setiap bulannya untuk melayani kebutuhan industri dan ritel di berbagai benua.",
+      "cap_extra_1": "Kapasitas Produksi Masif",
+      "cap_extra_2": "Suplai Berkelanjutan",
+      "cap_extra_3": "Kontrol Kualitas Ketat",
+      "qual_detail": "100% Premium Grade",
+      "qual_desc": "Hanya bahan baku kelapa terbaik yang kami gunakan. Arang carbon kami memiliki kadar abu rendah, panas yang stabil, dan tanpa bahan kimia tambahan, menjadikannya standar emas untuk BBQ dan Shisha di pasar internasional.",
+      "qual_extra_1": "Kadar Abu Low (< 2.5%)",
+      "qual_extra_2": "Panas Maksimal",
+      "qual_extra_3": "Eco-Friendly",
+      "exp_detail": "Global Export Ready",
+      "exp_desc": "Berpengalaman mengirimkan produk ke berbagai belahan dunia dengan dokumen ekspor lengkap. Kami memastikan setiap pengiriman dilakukan dengan standar logistik internasional untuk menjamin keamanan produk hingga sampai ke tangan Anda.",
+      "exp_extra_1": "Dokumen Ekspor Lengkap",
+      "exp_extra_2": "Logistik Terpercaya",
+      "exp_extra_3": "Jangkauan Seluruh Dunia",
+      "close": "Tutup"
     }
   },
   "why_us": {

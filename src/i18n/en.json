@@ -20,7 +20,23 @@
     "stats": {
       "cap": "Volume Capacity",
       "exp": "Export Ready",
-      "qual": "Premium Grade"
+      "qual": "Premium Grade",
+      "cap_detail": "High Volume Capacity",
+      "cap_desc": "We have a large production capacity to consistently meet global demand. Our facilities are capable of producing thousands of tons of high-quality coconut shell carbon charcoal every month to serve industrial and retail needs across various continents.",
+      "cap_extra_1": "Massive Production Capacity",
+      "cap_extra_2": "Sustainable Supply",
+      "cap_extra_3": "Strict Quality Control",
+      "qual_detail": "100% Premium Grade",
+      "qual_desc": "We only use the best coconut raw materials. Our carbon charcoal has low ash content, stable heat, and no added chemicals, making it the gold standard for BBQ and Shisha in the international market.",
+      "qual_extra_1": "Low Ash Content (< 2.5%)",
+      "qual_extra_2": "Maximum Heat",
+      "qual_extra_3": "Eco-Friendly",
+      "exp_detail": "Global Export Ready",
+      "exp_desc": "Experienced in shipping products to various parts of the world with complete export documentation. We ensure every shipment is handled with international logistics standards to guarantee product safety until it reaches your hands.",
+      "exp_extra_1": "Complete Export Documents",
+      "exp_extra_2": "Reliable Logistics",
+      "exp_extra_3": "Worldwide Reach",
+      "close": "Close"
     }
   },
   "why_us": {

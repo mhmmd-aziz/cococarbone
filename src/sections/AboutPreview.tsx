@@ -16,9 +16,9 @@ export default function AboutPreview() {
       icon: <TrendingUp className="w-10 h-10 mb-4 text-primary" />,
       title: "High",
       label: t('about_preview.stats.cap'),
-      detailTitle: "High Volume Capacity",
-      description: "Kami memiliki kapasitas produksi yang besar untuk memenuhi permintaan global secara konsisten. Fasilitas kami mampu menghasilkan ribuan ton arang carbon kelapa berkualitas tinggi setiap bulannya untuk melayani kebutuhan industri dan ritel di berbagai benua.",
-      extra: ["Kapasitas Produksi Masif", "Suplai Berkelanjutan", "Kontrol Kualitas Ketat"]
+      detailTitle: t('about_preview.stats.cap_detail'),
+      description: t('about_preview.stats.cap_desc'),
+      extra: [t('about_preview.stats.cap_extra_1'), t('about_preview.stats.cap_extra_2'), t('about_preview.stats.cap_extra_3')]
     },
     {
       id: 2,
@@ -26,18 +26,18 @@ export default function AboutPreview() {
       title: "100%",
       label: t('about_preview.stats.qual'),
       className: "sm:translate-y-8",
-      detailTitle: "100% Premium Grade",
-      description: "Hanya bahan baku kelapa terbaik yang kami gunakan. Arang carbon kami memiliki kadar abu rendah, panas yang stabil, dan tanpa bahan kimia tambahan, menjadikannya standar emas untuk BBQ dan Shisha di pasar internasional.",
-      extra: ["Kadar Abu Low (< 2.5%)", "Panas Maksimal", "Eco-Friendly"]
+      detailTitle: t('about_preview.stats.qual_detail'),
+      description: t('about_preview.stats.qual_desc'),
+      extra: [t('about_preview.stats.qual_extra_1'), t('about_preview.stats.qual_extra_2'), t('about_preview.stats.qual_extra_3')]
     },
     {
       id: 3,
       icon: <CheckCircle2 className="w-10 h-10 mb-4 text-primary" />,
       title: "Global",
       label: t('about_preview.stats.exp'),
-      detailTitle: "Global Export Ready",
-      description: "Berpengalaman mengirimkan produk ke berbagai belahan dunia dengan dokumen ekspor lengkap. Kami memastikan setiap pengiriman dilakukan dengan standar logistik internasional untuk menjamin keamanan produk hingga sampai ke tangan Anda.",
-      extra: ["Dokumen Ekspor Lengkap", "Logistik Terpercaya", "Jangkauan Seluruh Dunia"]
+      detailTitle: t('about_preview.stats.exp_detail'),
+      description: t('about_preview.stats.exp_desc'),
+      extra: [t('about_preview.stats.exp_extra_1'), t('about_preview.stats.exp_extra_2'), t('about_preview.stats.exp_extra_3')]
     }
   ];
 
@@ -156,7 +156,7 @@ export default function AboutPreview() {
                   onClick={() => setSelectedCard(null)}
                   className="w-full mt-10 py-4 bg-primary text-white font-bold rounded-2xl hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20"
                 >
-                  Tutup
+                  {t('about_preview.stats.close')}
                 </button>
               </div>
             </motion.div>
