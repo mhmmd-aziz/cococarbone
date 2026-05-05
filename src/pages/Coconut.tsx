@@ -7,9 +7,9 @@ import CTAWhatsapp from '../components/CTAWhatsapp';
 
 // 1. Import gambar kelapa dan infografis spesifikasi
 import imgCoconut from '../assets/kelapaori1.png';
-import imgCoconut2 from '../assets/kelapaori3.png';
+import imgCoconut2 from '../assets/updatekelapa.png';
 import imgCoconut3 from '../assets/kelapa1.png';
-import imgSpekKelapa from '../assets/spek_kelapa.png'; // <-- Gambar Spek Kelapa
+import imgSpekKelapa from '../assets/spekkelapa.png'; // <-- Gambar Spek Kelapa
 
 export default function Coconut() {
   const { t } = useTranslation();
